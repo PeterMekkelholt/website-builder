@@ -23,3 +23,8 @@ Getting [Builder.io](http://Builder.io) working
   * loading it in `_app.js` 
   * The config file is under `components/builder/`
 * If you rename a custom component in next.js, you may get ”Missing registration” errors. It may take builder time to update and if it doesn't you may need to edit the different pages using the components and remove the old version 
+
+## Next step
+1. Develop csutom component with image *currently blocked with inline styles reading image url)
+
+![image](https://user-images.githubusercontent.com/99825339/213774328-8003bd03-2d70-4fe1-942b-110b805f5987.png)
