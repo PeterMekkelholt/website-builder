@@ -24,6 +24,7 @@ Getting [Builder.io](http://Builder.io) working
   * The config file is under `components/builder/`
 * If you rename a custom component in next.js, you may get ”Missing registration” errors. It may take builder time to update and if it doesn't you may need to edit the different pages using the components and remove the old version 
 * It can take a little time for the content changes form builder.io to come through
+* By default builder.io is linked to the liver (vercel version) when editing pages you can point them towards your local dev i.e. http://localhost:3000 [here's the documentation on how](https://www.builder.io/c/docs/guides/preview-url) 
 
-# Custom Components
+## Custom Components
 - This is a list of [Component Field Types](https://www.builder.io/c/docs/custom-components-input-types) i.e. Test, Number etc use this to understnad what parameters you need to pass through when registering them
