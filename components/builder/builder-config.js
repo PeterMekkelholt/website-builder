@@ -86,6 +86,32 @@ import dynamic from 'next/dynamic'
       ],
     }
   )
+
+  Builder.registerComponent(
+    dynamic (()=> import('./M49_footer') ),
+    {
+      name: 'M49 Footer',
+      image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+      inputs: [
+        {
+          name: 'links',
+          type: 'list',
+          subFields: [
+	          {
+              name: 'caption',
+              type: 'string',
+            defaultValue: 'Page name i.e. about',
+            },
+            {
+              name: 'url',
+              type: 'string',
+              defaultValue: '/about',
+            },
+          ]
+        },
+      ],
+    }
+  )
   
   Builder.register('insertMenu', {
     name: 'Mach49 Components',
@@ -93,6 +119,7 @@ import dynamic from 'next/dynamic'
       { name: 'M49 Page Heading' },
       { name: 'M49 3 Columns' },
       { name: 'M49 Banner' },
+      { name: 'M49 Footer'}
     ],
   });
   
