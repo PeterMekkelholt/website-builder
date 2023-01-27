@@ -13,6 +13,7 @@ const M49_banner = props => (
               src={props.banner_image}
               fill
               style={m49_banner_image}
+              alt = "alt text"
               />
             <div className="m49_banner_caption">{props.banner_caption}</div>
         </div>        
