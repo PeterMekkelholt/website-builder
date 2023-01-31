@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar';
   Initialize the Builder SDK with your organization's API Key
   The API Key can be found on: https://builder.io/account/settings
 */
-builder.init('5104cfed9d57493fb6993382c28cd166');
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
 export async function getStaticProps({ params }) {
   /*
