@@ -28,6 +28,3 @@ Getting [Builder.io](http://Builder.io) working
 
 ## Custom Components
 - This is a list of [Component Field Types](https://www.builder.io/c/docs/custom-components-input-types) i.e. Test, Number etc use this to understnad what parameters you need to pass through when registering them
-
-## Misc
-* If the bulder account is cancelled then the content will still be displayed but no longer editable. There are also options to [export the content as JSON or files here](https://forum.builder.io/t/what-if-i-want-to-move-off-of-builder-io/384) if you wanted to modify it in the future 
