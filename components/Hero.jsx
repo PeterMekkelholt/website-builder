@@ -13,7 +13,7 @@ import {
   createIcon,
 } from '@chakra-ui/react'
 
-export const M49_hero = () => {
+export const Hero = () => {
   return (
     <Container maxW={'3xl'}>
       <Stack
@@ -27,7 +27,10 @@ export const M49_hero = () => {
           fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
           lineHeight={'110%'}
         >
-          {props.hero_title}
+          Make money from <br />
+          <Text as={'span'} color={'green.400'}>
+            your audience
+          </Text>
         </Heading>
         <Text color={'gray.500'}>
           Monetize your content by charging your most loyal readers and reward
@@ -94,4 +97,4 @@ const Arrow = createIcon({
   ),
 })
 
-export default M49_hero
+export default Hero
