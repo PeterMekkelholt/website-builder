@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   createIcon,
 } from '@chakra-ui/react'
+import * as React from 'react'
 
 export const M49_hero = () => {
   return (
