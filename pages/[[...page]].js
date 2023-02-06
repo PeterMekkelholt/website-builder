@@ -10,7 +10,8 @@ import {
   Text,
 } from '@builder.io/react'
 import Navbar from '../components/Navbar'
-// import Hero from '../components/Hero.jsx'
+import Hero from '../components/Hero.jsx'
+import Slider from '../components/Slider.jsx'
 
 /*
   Initialize the Builder SDK with your organization's API Key
@@ -91,6 +92,7 @@ export default function Page({ page }) {
 
       <Navbar />
       {/* <Hero /> */}
+      {/* <Slider /> */}
       {/* <Text>HELLO WORLD</Text> */}
 
       {/* Render the Builder page */}
