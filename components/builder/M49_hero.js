@@ -11,7 +11,7 @@ import {
   createIcon,
 } from '@chakra-ui/react'
 
-export const Hero = () => {
+export const M49_hero = () => {
   return (
     <>
       <Head>
