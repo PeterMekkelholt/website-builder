@@ -137,5 +137,6 @@ Builder.register('insertMenu', {
     { name: 'M49 3 Columns' },
     { name: 'M49 Banner' },
     { name: 'M49 Footer' },
+    { name: 'M49 Hero' },
   ],
 })
