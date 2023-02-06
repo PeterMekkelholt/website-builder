@@ -68,7 +68,7 @@ Builder.registerComponent(
 Builder.registerComponent(
   dynamic(() => import('./M49_hero')),
   {
-    name: 'M49 Hero',
+    name: 'M49 Hero 2',
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
@@ -146,7 +146,7 @@ Builder.register('insertMenu', {
     { name: 'M49 3 Columns' },
     { name: 'M49 Banner' },
     { name: 'M49 Footer' },
-    { name: 'M49 Hero' },
+    { name: 'M49 Hero 2' },
     { name: 'M49 Slider' },
   ],
 })

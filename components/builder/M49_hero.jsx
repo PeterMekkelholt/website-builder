@@ -13,7 +13,7 @@ import {
   createIcon,
 } from '@chakra-ui/react'
 
-export const Hero = () => {
+export const M49_hero = () => {
   return (
     <Container maxW={'3xl'}>
       <Stack
@@ -95,4 +95,4 @@ const Arrow = createIcon({
   ),
 })
 
-export default Hero
+export default M49_hero
