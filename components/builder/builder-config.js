@@ -48,12 +48,18 @@ Builder.registerComponent(M49_children_hero, {
       defaultValue:
         'Track Your Carbon Emissions with Precision using Carbon-A-Tron 9000',
     },
+    {
+      name: 'body_image',
+      type: 'file',
+      required: true,
+      allowedFileTypes: ['jpeg', 'png'],
+    },
   ],
   // (Optionally) specify requirements that the direct children can only be certain types
   childRequirements: {
-    message: 'You can only put Buttons, Text, or Headings in a Hero',
+    message: 'You can only put Buttons, Text, Slider, or Headings in a Hero',
     query: {
-      'component.name': { $in: ['Button', 'Text', 'Heading'] },
+      'component.name': { $in: ['Button', 'Text', 'Heading', 'M49 Slider'] },
     },
   },
 })

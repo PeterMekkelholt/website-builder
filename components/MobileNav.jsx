@@ -20,6 +20,7 @@ import { RemoveScroll } from 'react-remove-scroll'
 import { Logo } from './Logo'
 import { NavLink } from './NavLink'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 const variants = {
   show: {
     display: 'revert',

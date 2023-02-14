@@ -16,7 +16,8 @@ export const M49_body = (props) => {
   return (
     <Box
       as="section"
-      backgroundImage="url('https://www.mitai.ai/bg-line-features.png')"
+      backgroundImage={props.body_image}
+      // backgroundImage="url('https://www.mitai.ai/bg-line-features.png')"
       backgroundRepeat="no-repeat"
       backgroundSize={'cover'}
       backgroundPosition={'center center'}
