@@ -2,16 +2,9 @@ import { useRouter } from 'next/router'
 import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import React from 'react'
-import {
-  BuilderComponent,
-  builder,
-  useIsPreviewing,
-  Builder,
-  Text,
-} from '@builder.io/react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero.jsx'
-import Slider from '../components/Slider.jsx'
+import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
+import Nav from '../components/Nav.jsx'
+// import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
 
 /*
   Initialize the Builder SDK with your organization's API Key
@@ -89,15 +82,12 @@ export default function Page({ page }) {
         <title>{page?.data.title}</title>
         <meta name="description" content={page?.data.descripton} />
       </Head>
-
-      <Navbar />
-      {/* <Hero /> */}
-      {/* <Slider /> */}
-      {/* <Text>HELLO WORLD</Text> */}
-
+      {/* <Nav /> */}
+      {/* <BuilderComponent model="nav" /> */}
       {/* Render the Builder page */}
+
       <BuilderComponent model="page" content={page} />
-      {/* <Text>HELLO WORLD</Text> */}
+
       <BuilderComponent model="footer" />
     </>
   )

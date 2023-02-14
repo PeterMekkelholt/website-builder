@@ -13,7 +13,8 @@ import {
   createIcon,
 } from '@chakra-ui/react'
 
-export const M49_hero = () => {
+// const M49_hero9_3_columns = props => ()
+export const M49_hero = (props) => {
   return (
     <Container maxW={'3xl'}>
       <Stack
@@ -23,18 +24,24 @@ export const M49_hero = () => {
         py={{ base: 20, md: 36 }}
       >
         <Heading
+          fontWeight={800}
+          fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+          lineHeight={'110%'}
+        >
+          {props.hero_title}
+        </Heading>
+        {/* <Heading
           fontWeight={600}
           fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
           lineHeight={'110%'}
         >
           {props.hero_title}
-          {/* HELLO WORLD */}
-        </Heading>
-        <Text color={'gray.500'}>
-          Monetize your content by charging your most loyal readers and reward
-          them loyalty points. Give back to your loyal readers by granting them
-          access to your pre-releases and sneak-peaks.
-        </Text>
+        </Heading> */}
+        <Text
+          color={'gray.500'}
+          dangerouslySetInnerHTML={createMarkup(props.hero_subtitle)}
+        ></Text>
+        {/* <Text color={'gray.500'}>{createMarkup(props.hero_subtitle)}</Text> */}
         <Stack
           direction={'column'}
           spacing={3}
@@ -73,7 +80,7 @@ export const M49_hero = () => {
               top={'-15px'}
               transform={'rotate(10deg)'}
             >
-              Starting at $15/mo
+              Starting at {props.hero_price}
             </Text>
           </Box>
         </Stack>
@@ -94,5 +101,9 @@ const Arrow = createIcon({
     />
   ),
 })
+
+function createMarkup(content) {
+  return { __html: content }
+}
 
 export default M49_hero

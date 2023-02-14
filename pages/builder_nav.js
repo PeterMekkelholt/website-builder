@@ -5,21 +5,21 @@ builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY)
 
 export async function getStaticProps({ params }) {
   const urlPath = '/' + (params?.page?.join('/') || '')
-  const footer = await builder
-    .get('footer', { userAttributes: { urlPath } })
+  const nav = await builder
+    .get('nav', { userAttributes: { urlPath } })
     .toPromise()
 
   return {
     props: {
-      footer: footer || null,
+      nav: nav || null,
     },
   }
 }
 
-export default function Page({ footer }) {
+export default function Page({ nav }) {
   return (
     <>
-      <BuilderComponent model="footer" content={footer} />
+      <BuilderComponent model="nav" content={nav} />
     </>
   )
 }
