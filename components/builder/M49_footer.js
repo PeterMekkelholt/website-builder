@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { Logo } from '../Logo'
-
+import { useState } from 'react'
+import Subscribe from '../../lib/mailerlite'
+import { toast } from 'react-toastify'
 import {
   Box,
   Container,
@@ -8,7 +10,10 @@ import {
   Stack,
   Text,
   useColorModeValue,
-} from '@chakra-ui/react'
+  FormControl,
+  Button,
+  Input,
+} from '@chakra-ui/react' 
 
 const ListHeader = ({ children }) => {
   return (
@@ -19,6 +24,41 @@ const ListHeader = ({ children }) => {
 }
 
 export const M49_footer = (props) => {
+  const [email, setEmail] = useState('')
+  const subscribeEmail = () => {
+    if (!email) {
+      alert('Please provide you email address')
+      return
+    }
+    Subscribe.postMailerLite({
+      email: email,
+      groups: ['80367673303631436'],
+      fields: {
+        name: 'anonym',
+        last_name: 'anonym',
+      },
+    })
+      .then((res) => {
+        console.log(res)
+        toast.success(
+          (`Thanks! Your email has been successfully registered.`, {
+            position: 'top-right',
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+        )
+        /*setTimeout(() => {
+          window.location.reload()
+        }, 3900)*/
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
@@ -71,8 +111,36 @@ export const M49_footer = (props) => {
             ))}
           </Stack>
         </SimpleGrid>
+
+        <FormControl id="email" pr="2">
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            value={email}
+            placeholder="hello@email.com"
+            onChange={(e) => setEmail(e.target.value)}
+            // value={formik.values.email}
+          />
+        </FormControl>
+        <Button
+          //isFullWidth
+          fontSize=".75em"
+          type="submit"
+          colorScheme="gray"
+          width="150px"
+          onClick={subscribeEmail}
+          // pl="1"
+          // pr="1"
+          // width="fit-content"
+        >
+          subscribe
+        </Button>
+
+
       </Container>
     </Box>
+
   )
 }
 
