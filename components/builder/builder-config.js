@@ -1,8 +1,10 @@
 import { Builder, BuilderComponent, withChildren } from '@builder.io/react'
 import M49_hero from './M49_body'
+import CQuel_body from './CQuel_body'
 import dynamic from 'next/dynamic'
 
 const M49_children_hero = withChildren(M49_hero)
+const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
   dynamic(() => import('./CQuel_hero')),
@@ -52,15 +54,25 @@ Builder.registerComponent(
   }
 )
 
-Builder.registerComponent(
-  dynamic(() => import('./CQuel_body')),
-  {
-    name: 'CQuel Body',
-    image:
-      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
-    inputs: [],
-  }
-)
+Builder.registerComponent(CQuel_children_body, {
+  name: 'CQuel Body',
+  image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+  inputs: [
+    {
+      name: 'body_title',
+      type: 'Text',
+      required: true,
+      defaultValue: 'We’re here at every step',
+    },
+  ],
+  // (Optionally) specify requirements that the direct children can only be certain types
+  childRequirements: {
+    message: 'You can only put Buttons, Text, Slider, or Headings in a Hero',
+    query: {
+      'component.name': { $in: ['Button', 'Text', 'Heading', 'M49 Slider'] },
+    },
+  },
+})
 
 Builder.registerComponent(
   dynamic(() => import('./CQuel_steps')),
@@ -70,7 +82,49 @@ Builder.registerComponent(
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
       {
-        name: 'step_icon',
+        name: 'step_1',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan',
+      },
+      {
+        name: 'step_icon_1',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'step_2',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan',
+      },
+      {
+        name: 'step_icon_2',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'step_3',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan',
+      },
+      {
+        name: 'step_icon_3',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'step_4',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan',
+      },
+      {
+        name: 'step_icon_4',
         type: 'file',
         required: true,
         allowedFileTypes: ['png'],
@@ -317,7 +371,6 @@ Builder.register('insertMenu', {
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },
     { name: 'CQuel Body' },
-    { name: 'M49 Default Nav' },
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
     { name: 'M49 3 Columns' },

@@ -13,25 +13,28 @@ import { HiPlay } from 'react-icons/hi'
 export const M49_body = (props) => {
   return (
     <Box
+      // bgColor="rgb(185, 227, 239, .2)"
       as="section"
-      backgroundImage={props.body_image}
-      // backgroundImage="url('https://www.mitai.ai/bg-line-features.png')"
       backgroundRepeat="no-repeat"
       backgroundSize={'cover'}
       backgroundPosition={'center center'}
-      bgColor="orange"
       pt="16"
-      pb="24"
+      // pb="24"
     >
       <Container maxW={'3xl'}>
         <Stack
           as={Box}
           textAlign={'center'}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 10, md: 18 }}
+          py={{ base: 10, md: 20 }}
         >
           <Heading
-            fontWeight={800}
+            as="h2"
+            fontFamily="Poppins"
+            size="2xl"
+            color="#284863"
+            fontWeight="extrabold"
+            letterSpacing="tight"
             fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}
             lineHeight={'110%'}
           >
@@ -39,7 +42,8 @@ export const M49_body = (props) => {
           </Heading>
         </Stack>
       </Container>
-      <Box
+      <Box width="100%" height="200px" bgColor="white"></Box>
+      {/* <Box
         maxW={{
           base: 'xl',
           md: '7xl',
@@ -51,7 +55,7 @@ export const M49_body = (props) => {
         }}
       >
         <div>{props.children}</div>
-      </Box>
+      </Box> */}
     </Box>
   )
 }
