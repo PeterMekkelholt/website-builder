@@ -27,8 +27,12 @@ const Body_Item = (props) => {
         }}
       >
         <Stack
-          direction={{
-            sm: 'column',
+          // direction={{
+          //   sm: 'column',
+          //   md: 'row',
+          // }}
+          flexDirection={{
+            sm: 'column-reverse',
             md: 'row',
           }}
           spacing={{
