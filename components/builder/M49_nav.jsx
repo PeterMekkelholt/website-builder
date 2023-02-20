@@ -39,6 +39,7 @@ export const M49_nav = (props) => {
       position="sticky"
       top="0em"
       transition="0.5s linear"
+      boxShadow="lg"
     >
       <Box
         maxW="7xl"
@@ -75,7 +76,6 @@ export const M49_nav = (props) => {
               }}
               spacing="8"
             >
-              {/* <Link href="#">{props.brand_title}</Link> */}
               {props.thing.map((menu, idx) => (
                 <div key={idx}>
                   <NavLink.Desktop active={menu.url}>
@@ -85,7 +85,7 @@ export const M49_nav = (props) => {
               ))}
             </HStack>
           </HStack>
-          <Flex align="center">
+          {/* <Flex align="center">
             <HStack
               spacing="8"
               display={{
@@ -115,7 +115,6 @@ export const M49_nav = (props) => {
                   lg2: 'none',
                 }}
               >
-                {/* <Text>SOME OTHER TEXT HERE</Text> */}
                 <HiOutlineMenu />
               </Box>
 
@@ -128,7 +127,6 @@ export const M49_nav = (props) => {
                     bg={mode('white', 'gray.700')}
                     shadow="lg"
                     rounded="lg"
-                    // ref={ref}
                     tabIndex={0}
                     outline={0}
                   >
@@ -148,7 +146,6 @@ export const M49_nav = (props) => {
                             }}
                           >
                             <Box srOnly>Close menu</Box>
-                            {/* <Text>SOME ICON HERE</Text> */}
                             <HiOutlineX aria-hidden fontSize="1.5rem" />
                           </Center>
                         </Box>
@@ -162,7 +159,6 @@ export const M49_nav = (props) => {
                           sm: 2,
                         }}
                       >
-                        {/* <Text>TeST</Text> */}
                         {props.thing.map((menu, idx) => (
                           <div key={idx}>
                             <NavLink.Desktop active={menu.url}>
@@ -170,11 +166,6 @@ export const M49_nav = (props) => {
                             </NavLink.Desktop>
                           </div>
                         ))}
-                        {/* {props.links.map((menu, idx) => (
-                  <div className="m49_footer_link" key={idx}>
-                    <Link href={menu.url}>{menu.caption} </Link>
-                  </div>
-                ))} */}
                       </SimpleGrid>
                       <VStack mt="8" spacing="4">
                         <NextLink href="#" passHref>
@@ -192,9 +183,8 @@ export const M49_nav = (props) => {
                   </Box>
                 </FocusLock>
               </Transition>
-              {/* <MobileNav></MobileNav> */}
             </Box>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Box>
     </Box>

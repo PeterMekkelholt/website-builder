@@ -80,6 +80,7 @@ export default function Page({ page }) {
       <Head>
         {/* Add any relevant SEO metadata or open graph tags here */}
         <title>{page?.data.title}</title>
+        <link rel="stylesheet" href="..." />
         <meta name="description" content={page?.data.descripton} />
       </Head>
       {/* <Nav /> */}

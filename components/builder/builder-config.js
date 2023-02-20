@@ -5,35 +5,60 @@ import dynamic from 'next/dynamic'
 const M49_children_hero = withChildren(M49_hero)
 
 Builder.registerComponent(
-  dynamic(() => import('./M49_nav.jsx')),
+  dynamic(() => import('./CQuel_hero')),
   {
-    name: 'M49 Default Nav',
-    image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+    name: 'CQuel Hero',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
       {
-        name: 'brand_title',
-        type: 'text',
+        name: 'hero_title',
+        type: 'longText',
         required: true,
-        defaultValue: 'Mach49 Brand',
+        defaultValue:
+          'Your <span style="color: #1B4965">Net Zero</span> strategy can be effectively implemented. At <span style="color: #1B4965">scale</span>.',
       },
       {
-        name: 'thing',
-        type: 'list',
+        name: 'hero_CTA',
+        type: 'Text',
         required: true,
-        subFields: [
-          {
-            name: 'caption',
-            type: 'string',
-            defaultValue: 'Page name i.e. about',
-          },
-          {
-            name: 'url',
-            type: 'string',
-            defaultValue: '/about',
-          },
-        ],
+        defaultValue: 'Learn More',
+      },
+      {
+        name: 'hero_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['jpeg', 'png'],
+        defaultValue:
+          'https://images.unsplash.com/photo-1551836022-b06985bceb24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
+      },
+      {
+        name: 'hero_image_alt',
+        type: 'Text',
+        required: true,
+        defaultValue: 'CQuel Hero Image',
       },
     ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_nav')),
+  {
+    name: 'CQuel Nav',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_steps')),
+  {
+    name: 'CQuel Steps',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [],
   }
 )
 
@@ -51,7 +76,6 @@ Builder.registerComponent(M49_children_hero, {
     {
       name: 'body_image',
       type: 'file',
-      required: true,
       allowedFileTypes: ['jpeg', 'png'],
     },
   ],
@@ -272,6 +296,9 @@ Builder.registerComponent(
 Builder.register('insertMenu', {
   name: 'Mach49 Components',
   items: [
+    { name: 'CQuel Hero' },
+    { name: 'CQuel Nav' },
+    { name: 'CQuel Steps' },
     { name: 'M49 Default Nav' },
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
