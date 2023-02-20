@@ -67,12 +67,86 @@ Builder.registerComponent(CQuel_children_body, {
   ],
   // (Optionally) specify requirements that the direct children can only be certain types
   childRequirements: {
-    message: 'You can only put Buttons, Text, Slider, or Headings in a Hero',
+    message: 'You can only put Body Items or Text in a Hero',
     query: {
-      'component.name': { $in: ['Button', 'Text', 'Heading', 'M49 Slider'] },
+      'component.name': {
+        $in: ['CQuel Body Item Left', 'CQuel Body Item Right', 'Text'],
+      },
     },
   },
 })
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_body_item_left')),
+  {
+    name: 'CQuel Body Item Left',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'item_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'item_number',
+        type: 'Text',
+        required: true,
+        defaultValue: '#',
+      },
+      {
+        name: 'item_headline',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan on an asset level',
+      },
+      {
+        name: 'item_description',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_body_item_right')),
+  {
+    name: 'CQuel Body Item Right',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'item_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'item_number',
+        type: 'Text',
+        required: true,
+        defaultValue: '#',
+      },
+      {
+        name: 'item_headline',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan on an asset level',
+      },
+      {
+        name: 'item_description',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+    ],
+  }
+)
 
 Builder.registerComponent(
   dynamic(() => import('./CQuel_steps')),
@@ -371,6 +445,8 @@ Builder.register('insertMenu', {
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },
     { name: 'CQuel Body' },
+    { name: 'CQuel Body Item Left' },
+    { name: 'CQuel Body Item Right' },
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
     { name: 'M49 3 Columns' },
