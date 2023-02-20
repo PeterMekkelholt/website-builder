@@ -213,7 +213,21 @@ Builder.registerComponent(
     name: 'CQuel Signup',
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
-    inputs: [],
+    inputs: [
+      {
+        name: 'signup_title',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Beta Program',
+      },
+      {
+        name: 'signup_body',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Join our community to receive regular development updates, share your ideas, and get access to CQuel first.',
+      },
+    ],
   }
 )
 
