@@ -11,7 +11,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 
-export const M49_body = (props) => {
+export const CQuel_body = (props) => {
   return (
     <Box
       // bgColor="rgb(185, 227, 239, .2)"
@@ -157,14 +157,14 @@ export const M49_body = (props) => {
   )
 }
 
-export default M49_body
+export default CQuel_body
 
 // pass your custom component to withChildren()
-const HeroWithBuilderChildren = withChildren(M49_body)
+const HeroWithBuilderChildren = withChildren(CQuel_body)
 
 // specify defaultChildren when you register the component
 Builder.registerComponent(HeroWithBuilderChildren, {
-  name: 'M49_body',
+  name: 'CQuel_body',
   // Adding defaults is important for easy usability
   defaultChildren: [
     {
