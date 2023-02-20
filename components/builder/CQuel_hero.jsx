@@ -64,6 +64,8 @@ export const CQuel_Hero = (props) => {
             <Button
               size="lg"
               backgroundColor="white"
+              fontFamily="Poppins"
+              color="#284863"
               boxShadow="lg"
               // colorScheme="blue"
               height="14"

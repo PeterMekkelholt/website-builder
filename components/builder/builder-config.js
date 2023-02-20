@@ -68,7 +68,14 @@ Builder.registerComponent(
     name: 'CQuel Steps',
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
-    inputs: [],
+    inputs: [
+      {
+        name: 'step_icon',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+    ],
   }
 )
 
