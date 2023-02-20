@@ -53,6 +53,16 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
+  dynamic(() => import('./CQuel_body')),
+  {
+    name: 'CQuel Body',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [],
+  }
+)
+
+Builder.registerComponent(
   dynamic(() => import('./CQuel_steps')),
   {
     name: 'CQuel Steps',
@@ -299,6 +309,7 @@ Builder.register('insertMenu', {
     { name: 'CQuel Hero' },
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },
+    { name: 'CQuel Body' },
     { name: 'M49 Default Nav' },
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
