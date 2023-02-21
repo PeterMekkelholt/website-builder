@@ -230,7 +230,7 @@ Builder.registerComponent(
     ],
   }
 )
-
+/*
 Builder.registerComponent(M49_children_hero, {
   name: 'M49 Body',
   image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
@@ -256,7 +256,8 @@ Builder.registerComponent(M49_children_hero, {
     },
   },
 })
-
+*/
+/*
 Builder.registerComponent(
   dynamic(() => import('./M49_page_heading')),
   {
@@ -272,7 +273,8 @@ Builder.registerComponent(
     ],
   }
 )
-
+*/
+/*
 Builder.registerComponent(
   dynamic(() => import('./M49_3_col')),
   {
@@ -320,7 +322,9 @@ Builder.registerComponent(
     ],
   }
 )
+*/
 
+/*
 Builder.registerComponent(
   dynamic(() => import('./M49_hero')),
   {
@@ -350,7 +354,9 @@ Builder.registerComponent(
     ],
   }
 )
+*/
 
+/*
 Builder.registerComponent(
   dynamic(() => import('./M49_slider')),
   {
@@ -359,7 +365,9 @@ Builder.registerComponent(
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
   }
 )
+*/
 
+/*
 Builder.registerComponent(
   dynamic(() => import('./M49_banner')),
   {
@@ -381,7 +389,9 @@ Builder.registerComponent(
     ],
   }
 )
+*/
 
+/*
 Builder.registerComponent(
   dynamic(() => import('./M49_footer')),
   {
@@ -461,7 +471,9 @@ Builder.registerComponent(
     ],
   }
 )
+*/
 
+/*
 Builder.register('insertMenu', {
   name: 'Mach49 Components',
   items: [
@@ -481,3 +493,4 @@ Builder.register('insertMenu', {
     { name: 'M49 Slider' },
   ],
 })
+*/
