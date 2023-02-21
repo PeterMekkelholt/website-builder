@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { Logo } from '../Logo'
 import { useState } from 'react'
-import Subscribe from '../../lib/mailerlite'
-import { toast, ToastContainer } from 'react-toastify'
 import {
   Box,
   Container,
@@ -10,10 +8,6 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  FormControl,
-  Button,
-  Input,
-  useToast,
 } from '@chakra-ui/react' 
 
 const ListHeader = ({ children }) => {
@@ -25,42 +19,6 @@ const ListHeader = ({ children }) => {
 }
 
 export const M49_footer = (props) => {
-  const [email, setEmail] = useState('')
-  const toast = useToast()
-  const subscribeEmail = () => {
-    if (!email) {
-      alert('Please provide you email address')
-      return
-    }
-    Subscribe.postMailerLite({
-      email: email,
-      groups: ['80367673303631436'],
-      fields: {
-        name: 'anonym',
-        last_name: 'anonym',
-      },
-    })
-      .then((res) => {
-        console.log(res)
-        toast({
-          title: 'Sign Up Successful.',
-          description: "We've added your email to our mailing list.",
-          status: 'success',
-          duration: 5000,
-          isClosable: true,
-        })
-      })
-      .catch((err) => {
-        console.log(err)
-        toast({
-          title: 'Sign Up Unsuccessful.',
-          description: "Hmmm. Something went wrong, we're looking into it.",
-          status: 'error',
-          duration: 5000,
-          isClosable: true,
-        })
-      })
-  }
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
@@ -113,50 +71,8 @@ export const M49_footer = (props) => {
             ))}
           </Stack>
         </SimpleGrid>
-
-        <ToastContainer
-position="top-center"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
-<ToastContainer />
-
-        <FormControl id="email" pr="2">
-          <Input
-            id="email"
-            name="email"
-            type="email"
-            value={email}
-            placeholder="hello@email.com"
-            onChange={(e) => setEmail(e.target.value)}
-            // value={formik.values.email}
-          />
-        </FormControl>
-        <Button
-          //isFullWidth
-          fontSize=".75em"
-          type="submit"
-          colorScheme="gray"
-          width="150px"
-          onClick={subscribeEmail}
-          // pl="1"
-          // pr="1"
-          // width="fit-content"
-        >
-          subscribe
-        </Button>
-
-
       </Container>
     </Box>
-
   )
 }
 

@@ -1,7 +1,6 @@
-import { Builder, withChildren } from '@builder.io/react' // import withChildren
 import { useState } from 'react'
 import Subscribe from '../../lib/mailerlite'
-import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import {
   Box,
   Button,
@@ -9,15 +8,15 @@ import {
   Container,
   Stack,
   Text,
-  Center,
   FormControl,
   Input,
-  Flex,
   useColorModeValue as mode,
+  useToast,
 } from '@chakra-ui/react'
 
 export const CQuel_signup = (props) => {
   const [email, setEmail] = useState('')
+  const toast = useToast()
   const subscribeEmail = () => {
     if (!email) {
       alert('Please provide you email address')
@@ -33,24 +32,23 @@ export const CQuel_signup = (props) => {
     })
       .then((res) => {
         console.log(res)
-        toast.success(
-          (`Thanks! Your email has been successfully registered.`,
-          {
-            position: 'top-right',
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          })
-        )
-        /*setTimeout(() => {
-          window.location.reload()
-        }, 3900)*/
+        toast({
+          title: 'Sign Up Successful.',
+          description: "We've added your email to our mailing list.",
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        })
       })
       .catch((err) => {
         console.log(err)
+        toast({
+          title: 'Sign Up Unsuccessful.',
+          description: "Hmmm. Something went wrong, we're looking into it.",
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+        })
       })
   }
   return (
@@ -62,6 +60,8 @@ export const CQuel_signup = (props) => {
       minH="400px"
     >
       <Container maxW={'3xl'}>
+      <ToastContainer />
+
         <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 14 }}>
           <Heading
             as="h2"
@@ -72,7 +72,6 @@ export const CQuel_signup = (props) => {
             letterSpacing="tight"
             fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}
             lineHeight={'110%'}
-            // pt={{ base: 10, md: 20 }}
           >
             {props.signup_title}
           </Heading>
@@ -94,19 +93,14 @@ export const CQuel_signup = (props) => {
               value={email}
               placeholder="hello@email.com"
               onChange={(e) => setEmail(e.target.value)}
-              // value={formik.values.email}
             />
           </FormControl>
           <Button
-            //isFullWidth
             fontSize=".75em"
             type="submit"
             colorScheme="gray"
             width="150px"
             onClick={subscribeEmail}
-            // pl="1"
-            // pr="1"
-            // width="fit-content"
           >
             subscribe
           </Button>
