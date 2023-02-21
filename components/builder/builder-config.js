@@ -230,6 +230,30 @@ Builder.registerComponent(
     ],
   }
 )
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_footer')),
+  {
+    name: 'CQuel Footer',
+    image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+    inputs: [
+      {
+        name: 'footer_copy',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'footer_URL',
+        type: 'url',
+        required: true,
+        defaultValue: 'https://www.linkedin.com/',
+      },
+    ],
+  }
+)
+
 /*
 Builder.registerComponent(M49_children_hero, {
   name: 'M49 Body',
@@ -473,7 +497,6 @@ Builder.registerComponent(
 )
 */
 
-
 Builder.register('insertMenu', {
   name: 'Mach49 Components',
   items: [
@@ -484,7 +507,8 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body Item Left' },
     { name: 'CQuel Body Item Right' },
     { name: 'CQuel Signup' },
-/*
+    { name: 'CQuel Footer' },
+    /*
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
     { name: 'M49 3 Columns' },
