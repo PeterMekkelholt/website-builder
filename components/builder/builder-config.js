@@ -473,7 +473,7 @@ Builder.registerComponent(
 )
 */
 
-/*
+
 Builder.register('insertMenu', {
   name: 'Mach49 Components',
   items: [
@@ -484,6 +484,7 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body Item Left' },
     { name: 'CQuel Body Item Right' },
     { name: 'CQuel Signup' },
+/*
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
     { name: 'M49 3 Columns' },
@@ -491,6 +492,6 @@ Builder.register('insertMenu', {
     { name: 'M49 Footer' },
     { name: 'M49 Hero' },
     { name: 'M49 Slider' },
+*/
   ],
 })
-*/

@@ -89,7 +89,7 @@ export default function Page({ page }) {
 
       <BuilderComponent model="page" content={page} />
 
-      <BuilderComponent model="footer" />
+      {/*<BuilderComponent model="footer" />*/}
     </>
   )
 }
