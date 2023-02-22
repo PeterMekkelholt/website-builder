@@ -3,6 +3,7 @@ import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import React from 'react'
 import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
+import SEO from '../components/SEO'
 import Nav from '../components/Nav.jsx'
 // import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
 
@@ -82,6 +83,7 @@ export default function Page({ page }) {
         <title>{page?.data.title}</title>
         <link rel="stylesheet" href="..." />
         <meta name="description" content={page?.data.descripton} />
+        <SEO></SEO>
       </Head>
       {/* <Nav /> */}
       {/* <BuilderComponent model="nav" /> */}
