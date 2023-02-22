@@ -101,7 +101,7 @@ export default function Page({ page }) {
         <meta property="og:title" content="CQuel" />
         <meta
           property="og:description"
-          content="Net Zero, Carbon, Carbon Insetting, Carbon Management"
+          content="Effectively implementing your Net Zero strategy at scale."
         />
         <meta property="og:url" content="https://www.cquel.io/" />
 
@@ -114,7 +114,7 @@ export default function Page({ page }) {
         <meta name="twitter:title" content="CQuel" />
         <meta
           name="twitter:description"
-          content="Net Zero, Carbon, Carbon Insetting, Carbon Management"
+          content="Effectively implementing your Net Zero strategy at scale."
         />
 
         <meta name="twitter:site" content="CQuel" />
