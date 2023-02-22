@@ -32,8 +32,9 @@ const Body_Item = (props) => {
           //   md: 'row',
           // }}
           flexDirection={{
-            sm: 'column-reverse',
-            md: 'row',
+            base: 'column-reverse',
+            md: 'column-reverse',
+            lg2: 'row',
           }}
           spacing={{
             sm: '2rem',

@@ -32,8 +32,9 @@ const Body_Item = (props) => {
       >
         <Stack
           direction={{
-            sm: 'column',
-            md: 'row',
+            base: 'column',
+            md: 'column',
+            lg2: 'row',
           }}
           spacing={{
             sm: '2rem',
