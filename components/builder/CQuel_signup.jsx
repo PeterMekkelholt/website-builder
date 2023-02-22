@@ -10,6 +10,7 @@ import {
   Text,
   FormControl,
   Input,
+  Flex,
   useColorModeValue as mode,
   useToast,
 } from '@chakra-ui/react'
@@ -60,7 +61,7 @@ export const CQuel_signup = (props) => {
       minH="400px"
     >
       <Container maxW={'3xl'}>
-      <ToastContainer />
+        <ToastContainer />
 
         <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 14 }}>
           <Heading
@@ -84,26 +85,30 @@ export const CQuel_signup = (props) => {
           >
             {props.signup_body}
           </Text>
-          <FormControl id="email" pr="2">
-            <Input
-              backgroundColor="white"
-              id="email"
-              name="email"
-              type="email"
-              value={email}
-              placeholder="hello@email.com"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </FormControl>
-          <Button
-            fontSize=".75em"
-            type="submit"
-            colorScheme="gray"
-            width="150px"
-            onClick={subscribeEmail}
-          >
-            subscribe
-          </Button>
+          <Flex flexDirection="column">
+            <Flex flexDirection="row" w="100%">
+              <FormControl id="email" pr="2">
+                <Input
+                  backgroundColor="white"
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={email}
+                  placeholder="hello@email.com"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </FormControl>
+              <Button
+                fontSize=".75em"
+                type="submit"
+                colorScheme="gray"
+                width="150px"
+                onClick={subscribeEmail}
+              >
+                subscribe
+              </Button>
+            </Flex>
+          </Flex>
         </Stack>
       </Container>
     </Box>
