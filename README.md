@@ -31,3 +31,9 @@ Getting [Builder.io](http://Builder.io) working
 
 ## Misc
 * If the bulder account is cancelled then the content will still be displayed but no longer editable. There are also options to [export the content as JSON or files here](https://forum.builder.io/t/what-if-i-want-to-move-off-of-builder-io/384) if you wanted to modify it in the future 
+
+## Note: 
+The following branches are synced with vercel
+* cquel-development is the staging version - under cquel-mach49com account
+* cquel-production is the live version - under cquel-mach49com account
+* main is the live version - under rdt-mach49com account 
