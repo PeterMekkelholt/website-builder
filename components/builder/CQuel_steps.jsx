@@ -17,7 +17,7 @@ export const CQuel_Steps = (props) => {
       as="section"
       height="100%"
       pos="relative"
-      zIndex="999"
+      zIndex="1"
       position="relative"
       top="-75px"
       // bgColor="rgb(185, 227, 239, .2)"

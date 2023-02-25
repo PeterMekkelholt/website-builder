@@ -35,7 +35,7 @@ export const M49_nav = (props) => {
   return (
     <Box
       as="header"
-      zIndex={'9999'}
+      zIndex={'1'}
       bg="white"
       position="sticky"
       top="0em"
