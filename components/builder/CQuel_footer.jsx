@@ -53,7 +53,7 @@ export const CQuel_footer = (props) => {
               height="40px"
               color={useColorModeValue('gray.700', 'white')}
             />
-            <ButtonGroup variant="ghost" color="white" {...props}>
+            <ButtonGroup variant="ghost" color="white">
               <IconButton
                 as="a"
                 href={props.footer_URL}

@@ -58,17 +58,17 @@ export const M49_body = (props) => {
 
 export default M49_body
 
-// pass your custom component to withChildren()
-const HeroWithBuilderChildren = withChildren(M49_body)
+// // pass your custom component to withChildren()
+// const HeroWithBuilderChildren = withChildren(M49_body)
 
-// specify defaultChildren when you register the component
-Builder.registerComponent(HeroWithBuilderChildren, {
-  name: 'M49_body',
-  // Adding defaults is important for easy usability
-  defaultChildren: [
-    {
-      '@type': '@builder.io/sdk:Element',
-      component: { name: 'Text', options: { text: 'I am child text block!' } },
-    },
-  ],
-})
+// // specify defaultChildren when you register the component
+// Builder.registerComponent(HeroWithBuilderChildren, {
+//   name: 'M49_body',
+//   // Adding defaults is important for easy usability
+//   defaultChildren: [
+//     {
+//       '@type': '@builder.io/sdk:Element',
+//       component: { name: 'Text', options: { text: 'I am child text block!' } },
+//     },
+//   ],
+// })

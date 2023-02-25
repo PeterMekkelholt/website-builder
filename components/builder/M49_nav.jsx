@@ -65,7 +65,7 @@ export const M49_nav = (props) => {
                   textDecoration: 'none',
                 }}
               >
-                <VisuallyHidden>{props.brand_title}</VisuallyHidden>
+                <VisuallyHidden>{props?.brand_title}</VisuallyHidden>
                 <Logo></Logo>
               </Link>
             </Box>
@@ -76,16 +76,16 @@ export const M49_nav = (props) => {
               }}
               spacing="8"
             >
-              {props.thing.map((menu, idx) => (
+              {props?.menu_item?.map((menu, idx) => (
                 <div key={idx}>
                   <NavLink.Desktop active={menu.url}>
-                    {menu.caption}{' '}
+                    {menu.caption}
                   </NavLink.Desktop>
                 </div>
               ))}
             </HStack>
           </HStack>
-          {/* <Flex align="center">
+          <Flex align="center">
             <HStack
               spacing="8"
               display={{
@@ -159,10 +159,10 @@ export const M49_nav = (props) => {
                           sm: 2,
                         }}
                       >
-                        {props.thing.map((menu, idx) => (
+                        {props?.menu_item?.map((menu, idx) => (
                           <div key={idx}>
                             <NavLink.Desktop active={menu.url}>
-                              {menu.caption}{' '}
+                              {menu.caption}
                             </NavLink.Desktop>
                           </div>
                         ))}
@@ -184,7 +184,7 @@ export const M49_nav = (props) => {
                 </FocusLock>
               </Transition>
             </Box>
-          </Flex> */}
+          </Flex>
         </Flex>
       </Box>
     </Box>

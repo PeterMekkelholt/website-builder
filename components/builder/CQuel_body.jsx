@@ -159,17 +159,17 @@ export const CQuel_body = (props) => {
 
 export default CQuel_body
 
-// pass your custom component to withChildren()
-const HeroWithBuilderChildren = withChildren(CQuel_body)
+// // pass your custom component to withChildren()
+// const HeroWithBuilderChildren = withChildren(CQuel_body)
 
-// specify defaultChildren when you register the component
-Builder.registerComponent(HeroWithBuilderChildren, {
-  name: 'CQuel_body',
-  // Adding defaults is important for easy usability
-  defaultChildren: [
-    {
-      '@type': '@builder.io/sdk:Element',
-      component: { name: 'Text', options: { text: 'I am child text block!' } },
-    },
-  ],
-})
+// // specify defaultChildren when you register the component
+// Builder.registerComponent(HeroWithBuilderChildren, {
+//   name: 'CQuel_body',
+//   // Adding defaults is important for easy usability
+//   defaultChildren: [
+//     {
+//       '@type': '@builder.io/sdk:Element',
+//       component: { name: 'Text', options: { text: 'I am child text block!' } },
+//     },
+//   ],
+// })

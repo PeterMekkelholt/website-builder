@@ -254,6 +254,34 @@ Builder.registerComponent(
   }
 )
 
+Builder.registerComponent(
+  dynamic(() => import('./M49_nav')),
+  {
+    name: 'M49 Nav',
+    image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+    inputs: [
+      {
+        name: 'brand_title',
+        type: 'text',
+        required: true,
+        defaultValue: 'Your Brand',
+      },
+      {
+        name: 'menu_item',
+        type: 'list',
+        defaultValue: { caption: 'Link', url: 'https://google.com' },
+        subFields: [
+          { name: 'caption', type: 'string' },
+          {
+            name: 'url',
+            type: 'string',
+          },
+        ],
+      },
+    ],
+  }
+)
+
 /*
 Builder.registerComponent(M49_children_hero, {
   name: 'M49 Body',
@@ -508,6 +536,7 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body Item Right' },
     { name: 'CQuel Signup' },
     { name: 'CQuel Footer' },
+    { name: 'M49 Nav' },
     /*
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
