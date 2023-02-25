@@ -5,6 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Copy `.env.sample` to `.env.local`
 - Run `npm i` (same as npm install)
 - Run `npm run dev`
+# or
+- `yarn build`
+- `yarn run dev`
 
 ```bash
 npm run dev
@@ -15,6 +18,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 If you get “'next' is not recognized as an internal or external command”
 **`npm install react react-dom next`**
+
+If yarn can't run Next you may have to run `yarn add next`
 
 ## Developing with builder Notes
 Getting [Builder.io](http://Builder.io) working
@@ -37,3 +42,4 @@ The following branches are synced with vercel
 * cquel-development is the staging version - under cquel-mach49com account
 * cquel-production is the live version - under cquel-mach49com account
 * main is the live version - under rdt-mach49com account 
+
