@@ -267,9 +267,9 @@ Builder.registerComponent(
         defaultValue: 'Your Brand',
       },
       {
-        name: 'menu_item',
+        name: 'nav_items',
         type: 'list',
-        defaultValue: { caption: 'Link', url: 'https://google.com' },
+        defaultValue: [{ caption: 'Link', url: 'https://google.com' }],
         subFields: [
           { name: 'caption', type: 'string' },
           {

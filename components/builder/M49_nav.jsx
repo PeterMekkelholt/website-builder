@@ -31,6 +31,7 @@ export const M49_nav = (props) => {
   //   visible: show,
   //   shouldFocus: true,
   // })
+  const { nav_items } = props
   return (
     <Box
       as="header"
@@ -76,7 +77,7 @@ export const M49_nav = (props) => {
               }}
               spacing="8"
             >
-              {props?.menu_item?.map((menu, idx) => (
+              {nav_items?.map((menu, idx) => (
                 <div key={idx}>
                   <NavLink.Desktop active={menu.url}>
                     {menu.caption}
@@ -159,7 +160,7 @@ export const M49_nav = (props) => {
                           sm: 2,
                         }}
                       >
-                        {props?.menu_item?.map((menu, idx) => (
+                        {nav_items?.map((menu, idx) => (
                           <div key={idx}>
                             <NavLink.Desktop active={menu.url}>
                               {menu.caption}
