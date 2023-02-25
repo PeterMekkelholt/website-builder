@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
   */
   return {
     props: {
-      page: page || '/',
+      page: page ?? '/',
     },
     revalidate: 5,
   }
@@ -51,7 +51,7 @@ export async function getStaticPaths() {
   })
 
   return {
-    paths: pages.map((page) => `${page.data?.url}`),
+    paths: pages.map((page) => `${page?.data?.url}`),
     fallback: true,
   }
 }
@@ -64,8 +64,11 @@ export default function Page({ page }) {
   const isPreviewing = useIsPreviewing()
 
   if (router.isFallback) {
-    return <h1>And breath ...</h1>
+    return <h1>And breathe...</h1>
   }
+
+  const title = page?.data?.title ?? 'No Title'
+  const description = page?.data?.description ?? 'No Description'
 
   /*
     Add your error page here. This will happen if there are no matching
@@ -80,9 +83,8 @@ export default function Page({ page }) {
     <>
       <Head>
         {/* Add any relevant SEO metadata or open graph tags here */}
-        <title>{page?.data.title}</title>
-        <link rel="stylesheet" href="..." />
-        <meta name="description" content={page?.data.descripton} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <title>CQuel</title>
@@ -126,22 +128,14 @@ export default function Page({ page }) {
         <link rel="canonical" href="https://www.cquel.io/" />
 
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       {/* <Nav /> */}
       {/* <BuilderComponent model="nav" /> */}
-      {/* Render the Builder page */}
 
+      {/* Render the Builder page */}
       <BuilderComponent model="page" content={page} />
 
-      {/*<BuilderComponent model="footer" />*/}
+      {/* <BuilderComponent model="footer" /> */}
     </>
   )
 }

@@ -45,7 +45,7 @@ export const CQuel_Hero = (props) => {
             fontFamily="Poppins"
             size="3xl"
             lineHeight="1"
-            fontWeight="extrabold"
+            fontWeight="bold"
             letterSpacing="tight"
           >
             <Text
