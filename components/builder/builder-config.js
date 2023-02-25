@@ -259,6 +259,11 @@ Builder.registerComponent(
   {
     name: 'M49 Nav',
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+    defaultStyles: {
+      position: 'sticky',
+      top: '10px',
+      zIndex: '99',
+    },
     inputs: [
       {
         name: 'brand_title',
