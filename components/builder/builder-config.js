@@ -156,52 +156,31 @@ Builder.registerComponent(
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
       {
-        name: 'step_1',
-        type: 'Text',
+        name: 'step_items',
+        type: 'list',
         required: true,
-        defaultValue: 'Plan',
-      },
-      {
-        name: 'step_icon_1',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['png'],
-      },
-      {
-        name: 'step_2',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Plan',
-      },
-      {
-        name: 'step_icon_2',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['png'],
-      },
-      {
-        name: 'step_3',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Plan',
-      },
-      {
-        name: 'step_icon_3',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['png'],
-      },
-      {
-        name: 'step_4',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Plan',
-      },
-      {
-        name: 'step_icon_4',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['png'],
+        defaultValue: [
+          {
+            image: 'https://via.placeholder.com/100x100?text=ICON',
+            text: 'Step 1',
+          },
+          {
+            image: 'https://via.placeholder.com/100x100?text=ICON',
+            text: 'Step 2',
+          },
+          {
+            image: 'https://via.placeholder.com/100x100?text=ICON',
+            text: 'Step 3',
+          },
+          {
+            image: 'https://via.placeholder.com/100x100?text=ICON',
+            text: 'Step 4',
+          },
+        ],
+        subFields: [
+          { name: 'image', type: 'file' },
+          { name: 'text', type: 'string' },
+        ],
       },
     ],
   }

@@ -1,11 +1,13 @@
 import { Text, Center, Image, Stack, Circle, Box } from '@chakra-ui/react'
+import { Quicksand } from 'next/font/google'
+
+const quicksand = Quicksand({ subsets: ['latin'] })
 
 export const Step = (props) => {
   const { name, icon } = props
 
   return (
     <Stack
-      // bgColor="blue"
       padding="40px"
       direction="row"
       spacing={{
@@ -13,7 +15,7 @@ export const Step = (props) => {
         md: '5',
       }}
       height="150px"
-      width="100%"
+      width="340px"
     >
       <Center>
         <Circle size="28" bg="#74D199" mr="2em">
@@ -27,12 +29,12 @@ export const Step = (props) => {
           flex="1"
         >
           <Text
+            className={quicksand.className}
             fontSize={{
               base: 'lg',
               md: 'xl',
             }}
-            fontWeight="medium"
-            fontFamily="Quicksand"
+            fontWeight={400}
             color="#1F507A"
           >
             {name}
