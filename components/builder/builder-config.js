@@ -29,20 +29,20 @@ Builder.registerComponent(
         required: true,
         defaultValue: 'Learn More',
       },
-      {
-        name: 'hero_image',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['jpeg', 'png'],
-        defaultValue:
-          'https://images.unsplash.com/photo-1551836022-b06985bceb24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
-      },
-      {
-        name: 'hero_image_alt',
-        type: 'Text',
-        required: true,
-        defaultValue: 'CQuel Hero Image',
-      },
+      // {
+      //   name: 'hero_image',
+      //   type: 'file',
+      //   required: true,
+      //   allowedFileTypes: ['jpeg', 'png'],
+      //   defaultValue:
+      //     'https://images.unsplash.com/photo-1551836022-b06985bceb24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
+      // },
+      // {
+      //   name: 'hero_image_alt',
+      //   type: 'Text',
+      //   required: true,
+      //   defaultValue: 'CQuel Hero Image',
+      // },
     ],
   }
 )

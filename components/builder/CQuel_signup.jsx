@@ -109,7 +109,7 @@ export const CQuel_signup = (props) => {
                   width="150px"
                   onClick={subscribeEmail}
                 >
-                  subscribe
+                  Subscribe
                 </Button>
               </Flex>
             </Flex>
