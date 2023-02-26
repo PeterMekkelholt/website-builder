@@ -162,19 +162,19 @@ Builder.registerComponent(
         defaultValue: [
           {
             image: 'https://via.placeholder.com/100x100?text=ICON',
-            text: 'Step 1',
+            text: 'Plan',
           },
           {
             image: 'https://via.placeholder.com/100x100?text=ICON',
-            text: 'Step 2',
+            text: 'Select',
           },
           {
             image: 'https://via.placeholder.com/100x100?text=ICON',
-            text: 'Step 3',
+            text: 'Fund',
           },
           {
             image: 'https://via.placeholder.com/100x100?text=ICON',
-            text: 'Step 4',
+            text: 'Scale',
           },
         ],
         subFields: [
@@ -240,7 +240,7 @@ Builder.registerComponent(
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
     defaultStyles: {
       position: 'sticky',
-      top: '10px',
+      top: '0px',
       zIndex: '99',
     },
     inputs: [

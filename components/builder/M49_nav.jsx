@@ -94,13 +94,9 @@ export const M49_nav = (props) => {
                 lg2: 'flex',
               }}
             >
-              <Button colorScheme="green" rounded="full">
-                Sign Up
-              </Button>
+              <Button variant="nav">Sign Up</Button>
 
-              <Button colorScheme="green" rounded="full">
-                Sign In
-              </Button>
+              <Button variant="nav">Sign In</Button>
             </HStack>
 
             <Box ml="5">

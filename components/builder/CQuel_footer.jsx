@@ -16,7 +16,7 @@ import {
 
 export const CQuel_footer = (props) => {
   return (
-    <Box bg="#1B4965" color={useColorModeValue('gray.700', 'gray.200')}>
+    <Box bg="brand.darkBlue" color={useColorModeValue('gray.700', 'gray.200')}>
       <Box
         maxW={{
           base: 'xl',

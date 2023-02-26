@@ -62,18 +62,18 @@ export const CQuel_Hero = (props) => {
             mt="8"
           >
             <Button
-              size="lg"
-              backgroundColor="white"
-              fontFamily="Poppins"
-              color="#284863"
-              boxShadow="lg"
-              // colorScheme="blue"
-              height="14"
-              px="8"
-              fontSize="md"
-              _hover={{
-                boxShadow: 'xl',
-              }}
+              // size="lg"
+              // backgroundColor="white"
+              // fontFamily="Poppins"
+              // color="#284863"
+              // boxShadow="lg"
+              // height="14"
+              // px="8"
+              // fontSize="md"
+              // _hover={{
+              //   boxShadow: 'xl',
+              // }}
+              variant="carbon"
             >
               {props.hero_CTA}
             </Button>
