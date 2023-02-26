@@ -38,6 +38,18 @@ export default function Page({ page }) {
                 isClosable: true,
                 })
            })
+           /*
+            PUT THIS IN TO A THEN
+           Subscribe.postMailerLite({
+            email: email,
+            groups: ['81177811922978791'], //
+            fields: {
+              name: 'anonym',
+              last_name: 'anonym',
+            },
+          })
+           */
+
            .then(() => new Promise(resolve => setTimeout(resolve, 5000)))
            .then((res) => {
                 Router.push('/')

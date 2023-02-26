@@ -39,7 +39,7 @@ Getting [Builder.io](http://Builder.io) working
 
 ## Note: 
 The following branches are synced with vercel
-* cquel-development is the staging version - under cquel-mach49com account
+* cquel-development is the staging version - under cquel-mach49com account https://cquel-development.vercel.app/sign-up
 * cquel-production is the live version - under cquel-mach49com account
 * main is the live version - under rdt-mach49com account 
 
