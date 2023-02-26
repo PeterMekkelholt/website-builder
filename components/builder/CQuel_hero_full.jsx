@@ -19,19 +19,19 @@ export const CQuel_Hero_Full = (props) => {
     <Box as="section" minH="140px" position="relative">
       <Box py="32" position="relative" zIndex={1}>
         <Flex
-          maxW={{ base: 'xl', md: '7xl' }}
+          maxW={{ base: '2xl', md: '7xl' }}
           mx="auto"
           px={{ base: '6', md: '8' }}
           color="white"
           direction="row"
         >
-          <Flex maxW="xl" direction="column">
+          <Flex maxW="2xl" direction="column">
             <Heading
               as="h1"
               color="white"
               fontFamily="Poppins"
-              size="3xl"
-              lineHeight="1"
+              size="2xl"
+              lineHeight="1.3"
               fontWeight="bold"
               letterSpacing="tight"
             >
