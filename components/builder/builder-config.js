@@ -153,11 +153,66 @@ Builder.registerComponent(CQuel_children_body, {
     message: 'You can only put Body Items or Text in a Hero',
     query: {
       'component.name': {
-        $in: ['CQuel Body Item Left', 'CQuel Body Item Right', 'Text'],
+        $in: [
+          'CQuel Body Item',
+          'CQuel Body Item Left',
+          'CQuel Body Item Right',
+          'Text',
+        ],
       },
     },
   },
 })
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_body_item')),
+  {
+    name: 'CQuel Body Item',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'image_left',
+        type: 'boolean',
+        defaultValue: true,
+      },
+      {
+        name: 'item_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'item_headline',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan on an asset level',
+      },
+      {
+        name: 'item_description',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'text',
+        required: true,
+        defaultValue: 'Discover More',
+      },
+      {
+        name: 'item_button_url',
+        type: 'string',
+        required: true,
+        defaultValue: '#',
+      },
+    ],
+  }
+)
 
 Builder.registerComponent(
   dynamic(() => import('./CQuel_body_item_left')),
@@ -175,12 +230,6 @@ Builder.registerComponent(
         required: true,
         allowedFileTypes: ['png'],
       },
-      // {
-      //   name: 'item_number',
-      //   type: 'Text',
-      //   required: true,
-      //   defaultValue: '#',
-      // },
       {
         name: 'item_headline',
         type: 'Text',
@@ -651,6 +700,7 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body' },
     { name: 'CQuel Body Item Left' },
     { name: 'CQuel Body Item Right' },
+    { name: 'CQuel Body Item' },
     { name: 'CQuel Hines' },
     { name: 'CQuel Signup' },
     { name: 'CQuel Footer' },

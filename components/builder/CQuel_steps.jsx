@@ -41,12 +41,14 @@ export const CQuel_Steps = (props) => {
         </Flex>
         <Flex
           mt={10}
-          fontSize="45px"
+          // fontSize="45px"
           fontWeight={600}
           align="center"
           direction="column"
         >
-          <Heading>{subHeading}</Heading>
+          <Heading size="2xl" my={8}>
+            {subHeading}
+          </Heading>
           {logo && (
             <Box mt={10}>
               <Image src={logo} height={200} width={200} />
