@@ -125,6 +125,9 @@ Builder.registerComponent(
   dynamic(() => import('./CQuel_nav')),
   {
     name: 'CQuel Nav',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [],
@@ -133,6 +136,9 @@ Builder.registerComponent(
 
 Builder.registerComponent(CQuel_children_body, {
   name: 'CQuel Body',
+  defaultStyles: {
+    marginTop: 0,
+  },
   image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
   inputs: [
     // {
@@ -157,6 +163,9 @@ Builder.registerComponent(
   dynamic(() => import('./CQuel_body_item_left')),
   {
     name: 'CQuel Body Item Left',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
@@ -199,6 +208,9 @@ Builder.registerComponent(
   dynamic(() => import('./CQuel_body_item_right')),
   {
     name: 'CQuel Body Item Right',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [

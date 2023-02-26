@@ -11,15 +11,7 @@ export const CQuel_Steps = (props) => {
     children,
   } = props
   return (
-    <Box
-      bgColor="brand.darkBlue"
-      height="100%"
-      maxH={{
-        base: '350px',
-        md: '200px',
-        lg2: '75px',
-      }}
-    >
+    <Box bgColor="brand.darkBlue" height="100%">
       <Flex
         as="section"
         direction="column"
@@ -61,6 +53,7 @@ export const CQuel_Steps = (props) => {
             </Box>
           )}
         </Flex>
+        {children}
       </Flex>
     </Box>
   )

@@ -25,7 +25,7 @@ const theme = extendTheme({
           },
         },
         carbon: {
-          bg: 'brand.carbon',
+          bg: 'brand.darkBlue',
           color: 'white',
           rounded: 'full',
           fontWeight: '800',
