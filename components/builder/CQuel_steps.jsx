@@ -9,7 +9,7 @@ export const CQuel_Steps = (props) => {
       as="section"
       pos="relative"
       zIndex="1"
-      position="relative"
+      // position="relative"
       top="-75px"
     >
       <Flex
@@ -22,6 +22,8 @@ export const CQuel_Steps = (props) => {
           sm: '100%',
           md: '90%',
         }}
+        padding="30px"
+        // pl="50px"
       >
         {stepItems &&
           stepItems.map(({ image, text }, idx) => (

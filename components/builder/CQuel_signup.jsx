@@ -14,6 +14,7 @@ import {
   useColorModeValue as mode,
   useToast,
 } from '@chakra-ui/react'
+import HexagonSection from '../HexagonSection'
 
 export const CQuel_signup = (props) => {
   const [email, setEmail] = useState('')
@@ -111,6 +112,13 @@ export const CQuel_signup = (props) => {
           </Flex>
         </Stack>
       </Container>
+      {/* <HexagonSection
+        w="full"
+        h="full"
+        objectFit="cover"
+        objectPosition="top bottom"
+        position="absolute"
+      ></HexagonSection> */}
     </Box>
   )
 }

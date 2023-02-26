@@ -83,6 +83,16 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
+  dynamic(() => import('./CQuel_CTA')),
+  {
+    name: 'CQuel CTA',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [],
+  }
+)
+
+Builder.registerComponent(
   dynamic(() => import('./CQuel_nav')),
   {
     name: 'CQuel Nav',
@@ -562,6 +572,7 @@ Builder.register('insertMenu', {
   items: [
     { name: 'CQuel Hero Half' },
     { name: 'CQuel Hero Full' },
+    { name: 'CQuel CTA' },
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },
     { name: 'CQuel Body' },
