@@ -10,6 +10,9 @@ Builder.registerComponent(
   dynamic(() => import('./CQuel_hero_full')),
   {
     name: 'CQuel Hero Full',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
@@ -48,6 +51,9 @@ Builder.registerComponent(
   dynamic(() => import('./CQuel_hero_half')),
   {
     name: 'CQuel Hero Half',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
@@ -197,12 +203,25 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./CQuel_steps')),
+  withChildren(dynamic(() => import('./CQuel_steps'))),
   {
     name: 'CQuel Steps',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
+      {
+        name: 'sub_heading',
+        type: 'text',
+        defaultValue: 'Decarbonize this!',
+      },
+      {
+        name: 'logo',
+        type: 'file',
+        defaultValue: 'https://placehold.it/200x200/?text=Hines_Logo',
+      },
       {
         name: 'step_items',
         type: 'list',
@@ -263,6 +282,9 @@ Builder.registerComponent(
   {
     name: 'CQuel Footer',
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+    defaultStyles: {
+      marginTop: 0,
+    },
     inputs: [
       {
         name: 'footer_copy',
@@ -288,6 +310,9 @@ Builder.registerComponent(
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/app-window.png',
     canHaveChildren: true,
+    defaultStyles: {
+      margin: 0,
+    },
   }
 )
 
@@ -298,8 +323,9 @@ Builder.registerComponent(
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
     defaultStyles: {
       position: 'sticky',
-      top: '0px',
+      top: 0,
       zIndex: '99',
+      margin: 0,
     },
     inputs: [
       {
