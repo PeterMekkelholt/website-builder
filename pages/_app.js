@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Poppins, Quicksand } from 'next/font/google'
+import { Poppins, Quicksand } from '@next/font/google'
 
 import '../styles/globals.css'
 import '../components/builder/builder-config'
