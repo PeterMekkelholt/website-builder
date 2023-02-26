@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
-} from '@chakra-ui/react' 
+} from '@chakra-ui/react'
 
 const ListHeader = ({ children }) => {
   return (
@@ -40,7 +40,7 @@ export const M49_footer = (props) => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Product</ListHeader>
-            {props.product.map((menu, idx) => (
+            {props?.product?.map((menu, idx) => (
               <div key={idx}>
                 <Link href={menu.url}>{menu.caption} </Link>
               </div>
@@ -48,7 +48,7 @@ export const M49_footer = (props) => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
-            {props.company.map((menu, idx) => (
+            {props?.company?.map((menu, idx) => (
               <div key={idx}>
                 <Link href={menu.url}>{menu.caption} </Link>
               </div>
@@ -56,7 +56,7 @@ export const M49_footer = (props) => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Support</ListHeader>
-            {props.support.map((menu, idx) => (
+            {props?.support?.map((menu, idx) => (
               <div key={idx}>
                 <Link href={menu.url}>{menu.caption} </Link>
               </div>
@@ -64,7 +64,7 @@ export const M49_footer = (props) => {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Follow Us</ListHeader>
-            {props.social.map((menu, idx) => (
+            {props?.social?.map((menu, idx) => (
               <div key={idx}>
                 <Link href={menu.url}>{menu.caption} </Link>
               </div>

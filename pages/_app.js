@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Poppins, Quicksand } from 'next/font/google'
 
 import '../styles/globals.css'
 import '../components/builder/builder-config'
@@ -18,9 +19,18 @@ const theme = extendTheme({
   },
 })
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+})
+const quicksand = Quicksand({ subsets: ['latin'], weight: ['400'] })
+
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider
+      theme={theme}
+      className={[poppins.className, quicksand.className]}
+    >
       <Component {...pageProps} />
     </ChakraProvider>
   )
