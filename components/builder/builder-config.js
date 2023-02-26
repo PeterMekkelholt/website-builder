@@ -234,6 +234,16 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
+  withChildren(dynamic(() => import('./CQuel_section'))),
+  {
+    name: 'CQuel Section',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/app-window.png',
+    canHaveChildren: true,
+  }
+)
+
+Builder.registerComponent(
   dynamic(() => import('./M49_nav')),
   {
     name: 'M49 Nav',
@@ -520,6 +530,7 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body Item Right' },
     { name: 'CQuel Signup' },
     { name: 'CQuel Footer' },
+    { name: 'CQuel Section' },
     { name: 'M49 Nav' },
     /*
     { name: 'M49 Body' },

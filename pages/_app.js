@@ -8,6 +8,9 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 const theme = extendTheme({
   components: {
     Button: {
+      defaultProps: {
+        variant: 'carbon',
+      },
       variants: {
         nav: {
           bg: 'brand.gradient1',
@@ -19,6 +22,13 @@ const theme = extendTheme({
         carbon: {
           bg: 'brand.carbon',
           color: 'white',
+          rounded: 'full',
+          fontWeight: '800',
+          px: '35px',
+        },
+        white: {
+          bg: 'white',
+          color: 'brand.carbon',
           rounded: 'full',
           fontWeight: '800',
           px: '35px',
@@ -36,6 +46,7 @@ const theme = extendTheme({
       carbon: '#3A3A4A',
       gradient1: 'linear-gradient(135deg, #52A1CF 0%, #70C190 100%)',
       gradient2: 'linear-gradient(135deg, #7AB6C9 0%, #C7E8E7 100%)',
+      gradient3: 'linear-gradient(90deg, #7AB6C9 0%, #C7E8E7 100%)',
     },
   },
   styles: {
