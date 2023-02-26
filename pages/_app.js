@@ -18,7 +18,7 @@ const theme = extendTheme({
           fontWeight: '800',
           rounded: 'full',
           px: '25px',
-          transition: 'ease all 0.5s',
+          transition: 'ease all 0.25s',
           _hover: {
             bg: 'brand.gradient2',
             boxShadow: 'md',
@@ -30,9 +30,9 @@ const theme = extendTheme({
           rounded: 'full',
           fontWeight: '800',
           px: '35px',
-          transition: 'ease all 0.5s',
+          transition: 'ease all 0.25s',
           _hover: {
-            bg: 'brand.carbonLight',
+            bg: 'brand.carbonHover',
             boxShadow: 'md',
           },
         },
@@ -42,7 +42,7 @@ const theme = extendTheme({
           rounded: 'full',
           fontWeight: '800',
           px: '35px',
-          transition: 'ease all 0.5s',
+          transition: 'ease all 0.25s',
           _hover: {
             bg: 'brand.lightBlue',
             boxShadow: 'md',
@@ -59,6 +59,7 @@ const theme = extendTheme({
       lightGreen: '#BFE4E5',
       darkGreen: '#70C190',
       carbon: '#3A3A4A',
+      carbonHover: '#555569',
       gradient1: 'linear-gradient(135deg, #52A1CF 0%, #70C190 100%)',
       gradient2: 'linear-gradient(135deg, #7AB6C9 0%, #C7E8E7 100%)',
       gradient3: 'linear-gradient(90deg, #7AB6C9 0%, #C7E8E7 100%)',

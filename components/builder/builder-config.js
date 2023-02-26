@@ -7,9 +7,47 @@ const M49_children_hero = withChildren(M49_hero)
 const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
-  dynamic(() => import('./CQuel_hero')),
+  dynamic(() => import('./CQuel_hero_full')),
   {
-    name: 'CQuel Hero',
+    name: 'CQuel Hero Full',
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'hero_title',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Your <span style="color: #1B4965">Net Zero</span> strategy can be effectively implemented. At <span style="color: #1B4965">scale</span>.',
+      },
+      {
+        name: 'hero_CTA',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Learn More',
+      },
+      {
+        name: 'hero_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['jpeg', 'png'],
+        defaultValue:
+          'https://images.unsplash.com/photo-1551836022-b06985bceb24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
+      },
+      {
+        name: 'hero_image_alt',
+        type: 'Text',
+        required: true,
+        defaultValue: 'CQuel Hero Image',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_hero_half')),
+  {
+    name: 'CQuel Hero Half',
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
@@ -522,7 +560,8 @@ Builder.registerComponent(
 Builder.register('insertMenu', {
   name: 'Mach49 Components',
   items: [
-    { name: 'CQuel Hero' },
+    { name: 'CQuel Hero Half' },
+    { name: 'CQuel Hero Full' },
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },
     { name: 'CQuel Body' },

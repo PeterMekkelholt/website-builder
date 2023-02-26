@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { HiArrowRight } from 'react-icons/hi'
 
-export const CQuel_Hero = (props) => {
+export const CQuel_Hero_Half = (props) => {
   return (
     <Box
       as="section"
@@ -125,4 +125,4 @@ function createMarkup(content) {
   return { __html: content }
 }
 
-export default CQuel_Hero
+export default CQuel_Hero_Half
