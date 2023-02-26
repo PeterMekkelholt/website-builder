@@ -58,7 +58,7 @@ const Body_Item = (props) => {
               lg: '520px',
             }}
           >
-            <Text
+            {/* <Text
               size="xs"
               textTransform="uppercase"
               fontWeight="semibold"
@@ -67,7 +67,7 @@ const Body_Item = (props) => {
               pb="2em"
             >
               {props.item_number}
-            </Text>
+            </Text> */}
             <Heading
               as="h2"
               fontFamily="Poppins"
@@ -89,6 +89,9 @@ const Body_Item = (props) => {
             >
               {props.item_description}
             </Text>
+            <Button width="fit-content" mt="2em" variant="carbon">
+              {props.item_button}
+            </Button>
           </Flex>
           <Center
             width="100%"

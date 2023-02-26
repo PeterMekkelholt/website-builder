@@ -92,6 +92,29 @@ Builder.registerComponent(
   dynamic(() => import('./CQuel_CTA')),
   {
     name: 'CQuel CTA',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'CTA_title',
+        type: 'text',
+        required: true,
+        defaultValue: 'Every step on the road to decarbonising your assets',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_hines')),
+  {
+    name: 'CQuel Hines',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [],
@@ -112,12 +135,12 @@ Builder.registerComponent(CQuel_children_body, {
   name: 'CQuel Body',
   image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
   inputs: [
-    {
-      name: 'body_title',
-      type: 'Text',
-      required: true,
-      defaultValue: 'We’re here at every step',
-    },
+    // {
+    //   name: 'body_title',
+    //   type: 'Text',
+    //   required: true,
+    //   defaultValue: 'We’re here at every step',
+    // },
   ],
   // (Optionally) specify requirements that the direct children can only be certain types
   childRequirements: {
@@ -143,12 +166,12 @@ Builder.registerComponent(
         required: true,
         allowedFileTypes: ['png'],
       },
-      {
-        name: 'item_number',
-        type: 'Text',
-        required: true,
-        defaultValue: '#',
-      },
+      // {
+      //   name: 'item_number',
+      //   type: 'Text',
+      //   required: true,
+      //   defaultValue: '#',
+      // },
       {
         name: 'item_headline',
         type: 'Text',
@@ -161,6 +184,12 @@ Builder.registerComponent(
         required: true,
         defaultValue:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Discover More',
       },
     ],
   }
@@ -179,12 +208,12 @@ Builder.registerComponent(
         required: true,
         allowedFileTypes: ['png'],
       },
-      {
-        name: 'item_number',
-        type: 'Text',
-        required: true,
-        defaultValue: '#',
-      },
+      // {
+      //   name: 'item_number',
+      //   type: 'Text',
+      //   required: true,
+      //   defaultValue: '#',
+      // },
       {
         name: 'item_headline',
         type: 'Text',
@@ -197,6 +226,12 @@ Builder.registerComponent(
         required: true,
         defaultValue:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Discover More',
       },
     ],
   }
@@ -604,6 +639,7 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body' },
     { name: 'CQuel Body Item Left' },
     { name: 'CQuel Body Item Right' },
+    { name: 'CQuel Hines' },
     { name: 'CQuel Signup' },
     { name: 'CQuel Footer' },
     { name: 'CQuel Section' },
