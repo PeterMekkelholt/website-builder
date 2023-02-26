@@ -18,6 +18,11 @@ const theme = extendTheme({
           fontWeight: '800',
           rounded: 'full',
           px: '25px',
+          transition: 'ease all 0.5s',
+          _hover: {
+            bg: 'brand.gradient2',
+            boxShadow: 'md',
+          },
         },
         carbon: {
           bg: 'brand.carbon',
@@ -25,6 +30,11 @@ const theme = extendTheme({
           rounded: 'full',
           fontWeight: '800',
           px: '35px',
+          transition: 'ease all 0.5s',
+          _hover: {
+            bg: 'brand.carbonLight',
+            boxShadow: 'md',
+          },
         },
         white: {
           bg: 'white',
@@ -32,6 +42,11 @@ const theme = extendTheme({
           rounded: 'full',
           fontWeight: '800',
           px: '35px',
+          transition: 'ease all 0.5s',
+          _hover: {
+            bg: 'brand.lightBlue',
+            boxShadow: 'md',
+          },
         },
       },
     },
