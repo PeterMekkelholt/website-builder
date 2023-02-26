@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { HinesLogo } from '../HinesLogo'
 import {
   Badge,
   Box,
@@ -15,15 +16,16 @@ import HexagonSection from '../HexagonSection'
 
 export const CQuel_Hero_Full = (props) => {
   return (
-    <Box bg="gray.800" as="section" minH="140px" position="relative">
+    <Box as="section" minH="140px" position="relative">
       <Box py="32" position="relative" zIndex={1}>
-        <Box
+        <Flex
           maxW={{ base: 'xl', md: '7xl' }}
           mx="auto"
           px={{ base: '6', md: '8' }}
           color="white"
+          direction="row"
         >
-          <Box maxW="xl">
+          <Flex maxW="xl" direction="column">
             <Heading
               as="h1"
               color="white"
@@ -48,8 +50,18 @@ export const CQuel_Hero_Full = (props) => {
             >
               <Button variant="carbon">{props.hero_CTA}</Button>
             </Stack>
-          </Box>
-        </Box>
+          </Flex>
+          <Flex
+            display={{
+              base: 'none',
+              lg2: 'flex',
+            }}
+            width="100%"
+            justifyContent="flex-end"
+          >
+            <HinesLogo></HinesLogo>
+          </Flex>
+        </Flex>
       </Box>
       <Flex
         id="image-wrapper"
@@ -62,17 +74,15 @@ export const CQuel_Hero_Full = (props) => {
         align="center"
       >
         <Box position="relative" w="full" h="full">
-          <HexagonSection variant="hero"></HexagonSection>
-          {/* <Img
-            src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80"
-            alt="Main Image"
+          <HexagonSection
+            variant="hero"
             w="full"
             h="full"
             objectFit="cover"
             objectPosition="top bottom"
             position="absolute"
-          /> */}
-          <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
+          ></HexagonSection>
+          <Box position="absolute" w="full" h="full" />
         </Box>
       </Flex>
     </Box>
