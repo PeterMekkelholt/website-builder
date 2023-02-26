@@ -16,7 +16,7 @@ export const Step = (props) => {
         md: '5',
       }}
       height="150px"
-      width="340px"
+      width="220px"
     >
       <Center>
         <Hexagon mr={4} size={100} background="brand.gradient1">
