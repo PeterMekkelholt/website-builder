@@ -12,7 +12,12 @@ import {
 
 const Body_Item = (props) => {
   return (
-    <Box width="100%" height="100%" bgColor="white">
+    <Box
+      width="100%"
+      height="100%"
+      bgColor="white"
+      padding={{ base: '2em 0', md: '0' }}
+    >
       <Box
         maxW={{
           base: 'xl',
@@ -51,6 +56,7 @@ const Body_Item = (props) => {
             maxW={{
               lg: '520px',
             }}
+            mt="2em"
           >
             <Heading
               as="h2"
