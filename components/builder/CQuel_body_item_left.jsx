@@ -1,23 +1,30 @@
-import React, { useState } from 'react'
 import {
   Box,
   Button,
   Heading,
-  Container,
   Stack,
   Text,
   Center,
   Flex,
   Image,
   useColorModeValue as mode,
+  useTheme,
 } from '@chakra-ui/react'
+import mask from '../../public/smoke_mask.png'
 
 const Body_Item = (props) => {
+  const {
+    colors: {
+      brand: { carbonLight },
+    },
+  } = useTheme()
   return (
     <Box
+      id="here"
       width="100%"
       height="100%"
-      // bgColor="white"
+      background={`${carbonLight} url(${mask.src}) repeat `}
+      padding={{ base: '2em 0', md: '0' }}
     >
       <Box
         maxW={{
@@ -40,7 +47,6 @@ const Body_Item = (props) => {
             sm: '2rem',
             md: '2rem',
           }}
-          // mt="8"
           align={{
             lg: 'center',
           }}
@@ -63,7 +69,7 @@ const Body_Item = (props) => {
                 sm: '0',
                 md: '3em',
               }}
-              width="325px"
+              width="390px"
               height="250px"
               boxShadow="lg"
               borderRadius="xl"
@@ -87,16 +93,6 @@ const Body_Item = (props) => {
               lg: '520px',
             }}
           >
-            <Text
-              size="xs"
-              textTransform="uppercase"
-              fontWeight="semibold"
-              color="#98D897"
-              letterSpacing="wide"
-              pb="2em"
-            >
-              {props.item_number}
-            </Text>
             <Heading
               as="h2"
               fontFamily="Poppins"
@@ -118,6 +114,9 @@ const Body_Item = (props) => {
             >
               {props.item_description}
             </Text>
+            <Button width="fit-content" mt="2em" variant="carbon">
+              {props.item_button}
+            </Button>
           </Flex>
         </Stack>
       </Box>

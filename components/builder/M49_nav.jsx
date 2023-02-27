@@ -67,7 +67,7 @@ export const M49_nav = (props) => {
                 }}
               >
                 <VisuallyHidden>{props?.brand_title}</VisuallyHidden>
-                <Logo></Logo>
+                <Logo height="60px"></Logo>
               </Link>
             </Box>
             <HStack
@@ -94,9 +94,9 @@ export const M49_nav = (props) => {
                 lg2: 'flex',
               }}
             >
-              <Button variant="nav">Sign Up</Button>
+              <Button variant="nav">Account Login</Button>
 
-              <Button variant="nav">Sign In</Button>
+              <Button variant="nav">Vendor Login</Button>
             </HStack>
 
             <Box ml="5">
@@ -167,12 +167,12 @@ export const M49_nav = (props) => {
                       <VStack mt="8" spacing="4">
                         <NextLink href="#" passHref>
                           <Button colorScheme="green" rounded="full">
-                            Sign Up
+                            Account Login
                           </Button>
                         </NextLink>
                         <NextLink href="#" passHref>
                           <Button colorScheme="green" rounded="full">
-                            Sign In
+                            Vendor Login
                           </Button>
                         </NextLink>
                       </VStack>

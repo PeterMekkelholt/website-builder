@@ -5,6 +5,7 @@ import { FaLinkedin, FaTwitter } from 'react-icons/fa'
 import {
   Box,
   Container,
+  Button,
   SimpleGrid,
   Stack,
   IconButton,
@@ -28,32 +29,57 @@ export const CQuel_footer = (props) => {
           md: '8',
         }}
       >
-        <Flex
-          flexDirection="column"
-          justifyContent="center"
-          flex="1"
-          maxW={{
-            lg: '520px',
-          }}
-          mt="4em"
-          mb="4em"
-        >
+        <Container maxW={'3xl'}>
           <Text
             as="p"
             color="white"
-            mt="4"
+            pt="2em"
             fontSize="lg"
             fontWeight="regular"
             margin="1em 0"
           >
             {props.footer_copy}
           </Text>
-          <Flex flexDirection="row">
+        </Container>
+
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          flex="1"
+          // maxW={{
+          //   lg: '520px',
+          // }}
+          mt="2em"
+          mb="2em"
+        >
+          <Flex flexDirection="row" justifyContent="space-between">
             <Logo
-              height="40px"
+              height="70px"
               color={useColorModeValue('gray.700', 'white')}
             />
-            <ButtonGroup variant="ghost" color="white">
+            <Flex flexDirection="row" gap={10} mt="2em">
+              <Button width="fit-content" variant="white">
+                Contact us
+              </Button>
+              <ButtonGroup variant="ghost" color="white">
+                <Text mt=".5em" fontWeight={800}>
+                  Follow Us
+                </Text>
+                <IconButton
+                  as="a"
+                  href={props.footer_URL}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                  icon={<FaLinkedin fontSize="40px" />}
+                  _hover={{
+                    color: 'brand.lightBlue',
+                  }}
+                />
+              </ButtonGroup>
+            </Flex>
+
+            {/* <ButtonGroup variant="ghost" color="white">
               <IconButton
                 as="a"
                 href={props.footer_URL}
@@ -65,26 +91,10 @@ export const CQuel_footer = (props) => {
                   color: 'grey',
                 }}
               />
-            </ButtonGroup>
+            </ButtonGroup> */}
           </Flex>
         </Flex>
       </Box>
-      {/* <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid
-          templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }}
-          spacing={8}
-        >
-          <Stack spacing={6}>
-            <Box>
-              <Logo color={useColorModeValue('gray.700', 'white')} />
-            </Box>
-            <Text fontSize={'sm'}>
-              &copy; {new Date().getFullYear()} {props.brand_name}. All rights
-              reserved
-            </Text>
-          </Stack>
-        </SimpleGrid>
-      </Container> */}
     </Box>
   )
 }

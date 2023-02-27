@@ -7,9 +7,53 @@ const M49_children_hero = withChildren(M49_hero)
 const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
-  dynamic(() => import('./CQuel_hero')),
+  dynamic(() => import('./CQuel_hero_full')),
   {
-    name: 'CQuel Hero',
+    name: 'CQuel Hero Full',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'hero_title',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Your <span style="color: #1B4965">Net Zero</span> strategy can be effectively implemented. At <span style="color: #1B4965">scale</span>.',
+      },
+      {
+        name: 'hero_CTA',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Learn More',
+      },
+      // {
+      //   name: 'hero_image',
+      //   type: 'file',
+      //   required: true,
+      //   allowedFileTypes: ['jpeg', 'png'],
+      //   defaultValue:
+      //     'https://images.unsplash.com/photo-1551836022-b06985bceb24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
+      // },
+      // {
+      //   name: 'hero_image_alt',
+      //   type: 'Text',
+      //   required: true,
+      //   defaultValue: 'CQuel Hero Image',
+      // },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_hero_half')),
+  {
+    name: 'CQuel Hero Half',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
@@ -45,9 +89,45 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
+  dynamic(() => import('./CQuel_CTA')),
+  {
+    name: 'CQuel CTA',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'CTA_title',
+        type: 'text',
+        required: true,
+        defaultValue: 'Every step on the road to decarbonising your assets',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_hines')),
+  {
+    name: 'CQuel Hines',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [],
+  }
+)
+
+Builder.registerComponent(
   dynamic(() => import('./CQuel_nav')),
   {
     name: 'CQuel Nav',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [],
@@ -56,44 +136,54 @@ Builder.registerComponent(
 
 Builder.registerComponent(CQuel_children_body, {
   name: 'CQuel Body',
+  defaultStyles: {
+    marginTop: 0,
+  },
   image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
   inputs: [
-    {
-      name: 'body_title',
-      type: 'Text',
-      required: true,
-      defaultValue: 'We’re here at every step',
-    },
+    // {
+    //   name: 'body_title',
+    //   type: 'Text',
+    //   required: true,
+    //   defaultValue: 'We’re here at every step',
+    // },
   ],
   // (Optionally) specify requirements that the direct children can only be certain types
   childRequirements: {
     message: 'You can only put Body Items or Text in a Hero',
     query: {
       'component.name': {
-        $in: ['CQuel Body Item Left', 'CQuel Body Item Right', 'Text'],
+        $in: [
+          'CQuel Body Item',
+          'CQuel Body Item Left',
+          'CQuel Body Item Right',
+          'Text',
+        ],
       },
     },
   },
 })
 
 Builder.registerComponent(
-  dynamic(() => import('./CQuel_body_item_left')),
+  dynamic(() => import('./CQuel_body_item')),
   {
-    name: 'CQuel Body Item Left',
+    name: 'CQuel Body Item',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
+      {
+        name: 'image_left',
+        type: 'boolean',
+        defaultValue: true,
+      },
       {
         name: 'item_image',
         type: 'file',
         required: true,
         allowedFileTypes: ['png'],
-      },
-      {
-        name: 'item_number',
-        type: 'Text',
-        required: true,
-        defaultValue: '#',
       },
       {
         name: 'item_headline',
@@ -107,6 +197,57 @@ Builder.registerComponent(
         required: true,
         defaultValue:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'text',
+        required: true,
+        defaultValue: 'Discover More',
+      },
+      {
+        name: 'item_button_url',
+        type: 'string',
+        required: true,
+        defaultValue: '#',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_body_item_left')),
+  {
+    name: 'CQuel Body Item Left',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'item_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'item_headline',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan on an asset level',
+      },
+      {
+        name: 'item_description',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Discover More',
       },
     ],
   }
@@ -116,6 +257,9 @@ Builder.registerComponent(
   dynamic(() => import('./CQuel_body_item_right')),
   {
     name: 'CQuel Body Item Right',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
@@ -125,12 +269,12 @@ Builder.registerComponent(
         required: true,
         allowedFileTypes: ['png'],
       },
-      {
-        name: 'item_number',
-        type: 'Text',
-        required: true,
-        defaultValue: '#',
-      },
+      // {
+      //   name: 'item_number',
+      //   type: 'Text',
+      //   required: true,
+      //   defaultValue: '#',
+      // },
       {
         name: 'item_headline',
         type: 'Text',
@@ -144,17 +288,36 @@ Builder.registerComponent(
         defaultValue:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
       },
+      {
+        name: 'item_button',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Discover More',
+      },
     ],
   }
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./CQuel_steps')),
+  withChildren(dynamic(() => import('./CQuel_steps'))),
   {
     name: 'CQuel Steps',
+    defaultStyles: {
+      marginTop: 0,
+    },
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [
+      {
+        name: 'sub_heading',
+        type: 'text',
+        defaultValue: 'Decarbonize this!',
+      },
+      {
+        name: 'logo',
+        type: 'file',
+        defaultValue: 'https://placehold.it/200x200/?text=Hines_Logo',
+      },
       {
         name: 'step_items',
         type: 'list',
@@ -215,6 +378,9 @@ Builder.registerComponent(
   {
     name: 'CQuel Footer',
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+    defaultStyles: {
+      marginTop: 0,
+    },
     inputs: [
       {
         name: 'footer_copy',
@@ -240,6 +406,9 @@ Builder.registerComponent(
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/app-window.png',
     canHaveChildren: true,
+    defaultStyles: {
+      margin: 0,
+    },
   }
 )
 
@@ -250,8 +419,9 @@ Builder.registerComponent(
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
     defaultStyles: {
       position: 'sticky',
-      top: '0px',
+      top: 0,
       zIndex: '99',
+      margin: 0,
     },
     inputs: [
       {
@@ -522,12 +692,16 @@ Builder.registerComponent(
 Builder.register('insertMenu', {
   name: 'Mach49 Components',
   items: [
-    { name: 'CQuel Hero' },
+    { name: 'CQuel Hero Half' },
+    { name: 'CQuel Hero Full' },
+    { name: 'CQuel CTA' },
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },
     { name: 'CQuel Body' },
     { name: 'CQuel Body Item Left' },
     { name: 'CQuel Body Item Right' },
+    { name: 'CQuel Body Item' },
+    { name: 'CQuel Hines' },
     { name: 'CQuel Signup' },
     { name: 'CQuel Footer' },
     { name: 'CQuel Section' },

@@ -1,25 +1,34 @@
-import { Text, Center, Image, Stack, Circle } from '@chakra-ui/react'
+import { Text, Center, Image, Stack } from '@chakra-ui/react'
 import { Quicksand } from 'next/font/google'
 import Hexagon from '../components/Hexagon'
 
-const quicksand = Quicksand({ subsets: ['latin'] })
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  weight: ['700'],
+})
 
 export const Step = (props) => {
   const { name, icon } = props
 
   return (
     <Stack
-      padding="40px"
+      px="30px"
+      py="10px"
       direction="row"
       spacing={{
         base: '4',
         md: '5',
       }}
-      height="150px"
-      width="340px"
+      height="85px"
+      w="220px"
+      borderRight={{
+        md: '1px solid #e9e9e9',
+        sm: 'none',
+      }}
+      _last={{ border: 'none' }}
     >
       <Center>
-        <Hexagon mr={4} size={100} background="brand.gradient1">
+        <Hexagon mr={4} background="brand.gradient1">
           <Image width="70%" src={icon} alt="Alt" />
         </Hexagon>
         <Stack
@@ -35,8 +44,7 @@ export const Step = (props) => {
               base: 'lg',
               md: 'xl',
             }}
-            fontWeight={400}
-            color="#1F507A"
+            color="brand.darkBlue"
           >
             {name}
           </Text>

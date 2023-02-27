@@ -7,6 +7,6 @@ const nextConfig = {
 module.exports = {
   ...nextConfig,
   images: {
-    domains: ['cdn.builder.io'],
+    domains: ['cdn.builder.io', 'placehold.it'],
   },
 }
