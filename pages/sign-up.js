@@ -25,6 +25,8 @@ import {
   Container,
   FormHelperText,
   FormErrorMessage,
+  Checkbox,
+  CheckboxGroup,
   Button,
 } from '@chakra-ui/react'
 import { Logo } from '../components/Logo'
@@ -262,6 +264,13 @@ export default function Page({ page }) {
                   </FormErrorMessage>
                   <input {...register('message')} type="textarea"></input>
                 </FormControl>
+                <Stack spacing={5} direction="column">
+                  <Checkbox>Checkbox Title 1</Checkbox>
+                  <Checkbox>Checkbox Title 2</Checkbox>
+                  <Checkbox>Checkbox Title 3</Checkbox>
+                  <Checkbox>Checkbox Title 4</Checkbox>
+                </Stack>
+
                 <Button
                   role="submit"
                   width="fit-content"
