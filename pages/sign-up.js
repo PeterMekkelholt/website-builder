@@ -4,14 +4,14 @@ import { useForm } from "react-hook-form";
 import Router from 'next/router'
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify'
-
+import Subscribe from '../lib/mailerlite'
 //import { BuilderComponent, builder, useIsPreviewing, Builder } from '@builder.io/react';
 //import Navbar from '../components/Navbar';
 //builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 import {
     //Button,
     FormControl,
-    Input,
+    //Input,
     FormLabel,
     //Flex,
     useToast,
@@ -38,21 +38,19 @@ export default function Page({ page }) {
                 isClosable: true,
                 })
            })
-           /*
-            PUT THIS IN TO A THEN
-           Subscribe.postMailerLite({
-            email: email,
-            groups: ['81177811922978791'], //
-            fields: {
-              name: 'anonym',
-              last_name: 'anonym',
-            },
-          })
-           */
-
-           .then(() => new Promise(resolve => setTimeout(resolve, 5000)))
            .then((res) => {
-                Router.push('/')
+            Subscribe.postMailerLite({
+              email: data.email,
+              groups: ['81177811922978791'], 
+              fields: {
+                name: 'anonym',
+                last_name: 'anonym',
+              },
+            })        
+         })
+            .then(() => new Promise(resolve => setTimeout(resolve, 5000)))
+            .then((res) => {
+              Router.push('/')
             })
             .catch((err) => {
                 console.log(err)
@@ -73,22 +71,30 @@ export default function Page({ page }) {
         {/* <Navbar /> */}
         <ToastContainer />
 <form onSubmit={handleSubmit(onSubmit)} method="post">
-    <FormControl>
-        <FormLabel>Email address</FormLabel>
-        <input {...register("email")} ></input>
-    </FormControl>
-  <FormLabel for="first">First name:</FormLabel>
-  <input {...register("first_name")}></input>
-  
-  <FormLabel for="last">Last name:</FormLabel>
-  <input {...register("last_name")}></input>
-  <FormLabel for="last">Company name:</FormLabel>
-  <input {...register("company_name")}></input>
-  <FormLabel for="last">Role:</FormLabel>
-  <input {...register("role")}></input>
-  
-  <FormLabel for="last">Message:</FormLabel>
-  <input {...register("message")} type="textarea"></input>
+  <FormControl>
+    <FormLabel>Email address</FormLabel>
+    <input {...register("email")}></input>
+  </FormControl>
+  <FormControl>
+    <FormLabel for="first">First name:</FormLabel>
+    <input {...register("first_name")}></input>
+  </FormControl>
+  <FormControl>
+    <FormLabel for="last">Last name:</FormLabel>
+    <input {...register("last_name")}></input>
+  </FormControl>  
+  <FormControl>
+    <FormLabel for="last">Company name:</FormLabel>
+    <input {...register("company_name")}></input>
+  </FormControl>
+  <FormControl>
+    <FormLabel for="last">Role:</FormLabel>
+    <input {...register("role")}></input>
+  </FormControl>
+  <FormControl>  
+    <FormLabel for="last">Message:</FormLabel>
+    <input {...register("message")} type="textarea"></input>
+  </FormControl>
   <button role="submit">{isSubmitting ? "Submitting" : "Submit"}</button>
 </form>
 
