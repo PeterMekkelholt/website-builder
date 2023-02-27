@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Poppins } from 'next/font/google'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
+import { hotjar } from 'react-hotjar'
+import { useEffect } from 'react'
 import '../styles/globals.css'
 import '../components/builder/builder-config'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
@@ -84,6 +86,9 @@ const poppins = Poppins({
 })
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    hotjar.initialize(3385298, 6)
+  }, [])
   return (
     <ChakraProvider theme={theme} className={[poppins.className]}>
       <GoogleAnalytics trackPageViews />
