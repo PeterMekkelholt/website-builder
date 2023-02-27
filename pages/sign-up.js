@@ -27,6 +27,7 @@ import {
   FormErrorMessage,
   Checkbox,
   CheckboxGroup,
+  SimpleGrid,
   Button,
 } from '@chakra-ui/react'
 import { Logo } from '../components/Logo'
@@ -183,94 +184,105 @@ export default function Page({ page }) {
             md: '8',
           }}
         >
-          <Container maxW="lg">
-            <Stack spacing="10">
-              <form onSubmit={handleSubmit(onSubmit)} method="post">
-                <FormControl
-                  variant="floating"
-                  id="email"
-                  isRequired
-                  // isInvalid
-                >
-                  <Input placeholder=" " />
-                  <FormLabel>Email address</FormLabel>
-                  <FormHelperText>email@domain.com</FormHelperText>
-                  <FormErrorMessage>Your email is invalid</FormErrorMessage>
-                  <input {...register('email')}></input>
-                </FormControl>
-                <FormControl
-                  variant="floating"
-                  id="first_name"
-                  isRequired
-                  // isInvalid
-                >
-                  <Input placeholder=" " />
-                  <FormLabel for="first">First name:</FormLabel>
-                  <FormHelperText>Jane</FormHelperText>
-                  <FormErrorMessage>
-                    Your first name is invalid
-                  </FormErrorMessage>
-                  <input {...register('first_name')}></input>
-                </FormControl>
-                <FormControl
-                  variant="floating"
-                  id="last_name"
-                  isRequired
-                  // isInvalid
-                >
-                  <Input placeholder=" " />
-                  <FormLabel for="last">Last name:</FormLabel>
-                  <FormHelperText>Doe</FormHelperText>
-                  <FormErrorMessage>Your last name is invalid</FormErrorMessage>
-                  <input {...register('last_name')}></input>
-                </FormControl>
-                <FormControl
-                  variant="floating"
-                  id="company_name"
-                  isRequired
-                  // isInvalid
-                >
-                  <Input placeholder=" " />
-                  <FormLabel for="last">Company name:</FormLabel>
-                  <FormHelperText>Acme Co</FormHelperText>
-                  <FormErrorMessage>
-                    Your Company name is invalid
-                  </FormErrorMessage>
-                  <input {...register('company_name')}></input>
-                </FormControl>
-                <FormControl
-                  variant="floating"
-                  id="role"
-                  isRequired
-                  // isInvalid
-                >
-                  <Input placeholder=" " />
-                  <FormLabel for="last">Role:</FormLabel>
-                  <FormHelperText>Manager</FormHelperText>
-                  <FormErrorMessage>Please add a role.</FormErrorMessage>
-                  <input {...register('role')}></input>
-                </FormControl>
-                <FormControl
-                  variant="floating"
-                  id="role"
-                  isRequired
-                  // isInvalid
-                >
-                  <Textarea placeholder=" " />
-                  <FormLabel for="last">Message:</FormLabel>
-                  <FormHelperText>How can we help?</FormHelperText>
-                  <FormErrorMessage>
-                    Please write a message for us.
-                  </FormErrorMessage>
-                  <input {...register('message')} type="textarea"></input>
-                </FormControl>
+          <Container>
+            <SimpleGrid columns={[1, 1, 2]} spacing={20}>
+              <Stack spacing={5} direction="column">
+                <form onSubmit={handleSubmit(onSubmit)} method="post">
+                  <FormControl
+                    variant="floating"
+                    id="email"
+                    isRequired
+                    // isInvalid
+                    pb="1em"
+                  >
+                    <Input placeholder=" " {...register('email')} />
+                    <FormLabel>Email address</FormLabel>
+                    <FormHelperText>email@domain.com</FormHelperText>
+                    <FormErrorMessage>Your email is invalid</FormErrorMessage>
+                    {/* <input {...register('email')}></input> */}
+                  </FormControl>
+                  <FormControl
+                    variant="floating"
+                    id="first_name"
+                    isRequired
+                    // isInvalid
+                    pb="1em"
+                  >
+                    <Input placeholder=" " {...register('first_name')} />
+                    <FormLabel for="first">First name:</FormLabel>
+                    <FormHelperText>Jane</FormHelperText>
+                    <FormErrorMessage>
+                      Your first name is invalid
+                    </FormErrorMessage>
+                    {/* <input {...register('first_name')}></input> */}
+                  </FormControl>
+                  <FormControl
+                    variant="floating"
+                    id="last_name"
+                    isRequired
+                    // isInvalid
+                    pb="1em"
+                  >
+                    <Input placeholder=" " {...register('last_name')} />
+                    <FormLabel for="last">Last name:</FormLabel>
+                    <FormHelperText>Doe</FormHelperText>
+                    <FormErrorMessage>
+                      Your last name is invalid
+                    </FormErrorMessage>
+                    {/* <input {...register('last_name')}></input> */}
+                  </FormControl>
+                  <FormControl
+                    variant="floating"
+                    id="company_name"
+                    isRequired
+                    // isInvalid
+                    pb="1em"
+                  >
+                    <Input placeholder=" " {...register('company_name')} />
+                    <FormLabel for="last">Company name:</FormLabel>
+                    <FormHelperText>Acme Co</FormHelperText>
+                    <FormErrorMessage>
+                      Your Company name is invalid
+                    </FormErrorMessage>
+                    {/* <input {...register('company_name')}></input> */}
+                  </FormControl>
+                  <FormControl
+                    variant="floating"
+                    id="role"
+                    isRequired
+                    // isInvalid
+                    pb="1em"
+                  >
+                    <Input placeholder=" " {...register('role')} />
+                    <FormLabel for="last">Role:</FormLabel>
+                    <FormHelperText>Manager</FormHelperText>
+                    <FormErrorMessage>Please add a role.</FormErrorMessage>
+                    {/* <input {...register('role')}></input> */}
+                  </FormControl>
+                  <FormControl
+                    variant="floating"
+                    id="role"
+                    isRequired
+                    // isInvalid
+                    pb="1em"
+                  >
+                    <Textarea placeholder=" " {...register('message')} />
+                    <FormLabel for="last">Message:</FormLabel>
+                    <FormHelperText>How can we help?</FormHelperText>
+                    <FormErrorMessage>
+                      Please write a message for us.
+                    </FormErrorMessage>
+                    {/* <input {...register('message')} type="textarea"></input> */}
+                  </FormControl>
+                </form>
+              </Stack>
+              <Box>
                 <Stack spacing={5} direction="column">
                   <Checkbox>Checkbox Title 1</Checkbox>
                   <Checkbox>Checkbox Title 2</Checkbox>
                   <Checkbox>Checkbox Title 3</Checkbox>
                   <Checkbox>Checkbox Title 4</Checkbox>
                 </Stack>
-
                 <Button
                   role="submit"
                   width="fit-content"
@@ -279,8 +291,8 @@ export default function Page({ page }) {
                 >
                   {isSubmitting ? 'Submitting' : 'Submit'}
                 </Button>
-              </form>
-            </Stack>
+              </Box>
+            </SimpleGrid>
           </Container>
         </Box>
       </Box>
