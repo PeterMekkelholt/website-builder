@@ -48,7 +48,7 @@ export const CQuel_Steps = (props) => {
         >
           <Heading
             as="h2"
-            fontFamily="Poppins"
+            //fontFamily="Poppins"
             // size="2xl"
             color="brand.lightBlue"
             fontWeight="extrabold"

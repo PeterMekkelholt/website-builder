@@ -16,7 +16,8 @@ const Body_Item = (props) => {
       width="100%"
       height="100%"
       bgColor="white"
-      padding={{ base: '2em 0', md: '0' }}
+      padding="2em"
+      //padding={{ base: '2em 0', md: '2em 0', lg: '3em' }}
     >
       <Box
         maxW={{

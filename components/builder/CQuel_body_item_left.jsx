@@ -24,7 +24,8 @@ const Body_Item = (props) => {
       width="100%"
       height="100%"
       background={`${carbonLight} url(${mask.src}) repeat `}
-      padding={{ base: '2em 0', md: '0' }}
+      padding="2em"
+      //padding={{ base: '2em 0', md: '0' }}
     >
       <Box
         maxW={{
