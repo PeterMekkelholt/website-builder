@@ -184,10 +184,11 @@ export default function Page({ page }) {
             md: '8',
           }}
         >
-          <Container>
+                
+        <form onSubmit={handleSubmit(onSubmit)} method="post">
+        <Container>
             <SimpleGrid columns={[1, 1, 2]} spacing={20}>
               <Stack spacing={5} direction="column">
-                <form onSubmit={handleSubmit(onSubmit)} method="post">
                   <FormControl
                     variant="floating"
                     id="email"
@@ -201,6 +202,8 @@ export default function Page({ page }) {
                     <FormErrorMessage>Your email is invalid</FormErrorMessage>
                     {/* <input {...register('email')}></input> */}
                   </FormControl>
+
+
                   <FormControl
                     variant="floating"
                     id="first_name"
@@ -209,7 +212,7 @@ export default function Page({ page }) {
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('first_name')} />
-                    <FormLabel for="first">First name:</FormLabel>
+                    <FormLabel htmlFor="first">First name:</FormLabel>
                     <FormHelperText>Jane</FormHelperText>
                     <FormErrorMessage>
                       Your first name is invalid
@@ -222,9 +225,9 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                  >
+                    >
                     <Input placeholder=" " {...register('last_name')} />
-                    <FormLabel for="last">Last name:</FormLabel>
+                    <FormLabel htmlFor="last">Last name:</FormLabel>
                     <FormHelperText>Doe</FormHelperText>
                     <FormErrorMessage>
                       Your last name is invalid
@@ -237,9 +240,9 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                  >
+                    >
                     <Input placeholder=" " {...register('company_name')} />
-                    <FormLabel for="last">Company name:</FormLabel>
+                    <FormLabel htmlFor="last">Company name:</FormLabel>
                     <FormHelperText>Acme Co</FormHelperText>
                     <FormErrorMessage>
                       Your Company name is invalid
@@ -252,9 +255,9 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                  >
+                    >
                     <Input placeholder=" " {...register('role')} />
-                    <FormLabel for="last">Role:</FormLabel>
+                    <FormLabel htmlFor="last">Role:</FormLabel>
                     <FormHelperText>Manager</FormHelperText>
                     <FormErrorMessage>Please add a role.</FormErrorMessage>
                     {/* <input {...register('role')}></input> */}
@@ -265,35 +268,36 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                  >
+                    >
                     <Textarea placeholder=" " {...register('message')} />
-                    <FormLabel for="last">Message:</FormLabel>
+                    <FormLabel htmlFor="last">Message:</FormLabel>
                     <FormHelperText>How can we help?</FormHelperText>
                     <FormErrorMessage>
                       Please write a message for us.
                     </FormErrorMessage>
                     {/* <input {...register('message')} type="textarea"></input> */}
                   </FormControl>
-                </form>
               </Stack>
+
               <Box>
                 <Stack spacing={5} direction="column">
-                  <Checkbox>Checkbox Title 1</Checkbox>
-                  <Checkbox>Checkbox Title 2</Checkbox>
-                  <Checkbox>Checkbox Title 3</Checkbox>
-                  <Checkbox>Checkbox Title 4</Checkbox>
+                  <Checkbox {...register('product_1_plan')}>Plan</Checkbox>
+                  <Checkbox {...register('product_2_select')}>Select</Checkbox>
+                  <Checkbox {...register('product_3_fund')}>Fund</Checkbox>
+                  <Checkbox {...register('product_4_scale')}>Scale</Checkbox>
                 </Stack>
-                <Button
-                  role="submit"
-                  width="fit-content"
-                  mt="2em"
-                  variant="carbon"
-                >
-                  {isSubmitting ? 'Submitting' : 'Submit'}
-                </Button>
               </Box>
             </SimpleGrid>
+            <Button
+              type="submit"
+              width="fit-content"
+              mt="2em"
+              variant="carbon"
+              >
+              {isSubmitting ? 'Submitting' : 'Submit'}
+            </Button>
           </Container>
+        </form>
         </Box>
       </Box>
 
