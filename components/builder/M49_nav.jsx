@@ -94,9 +94,25 @@ export const M49_nav = (props) => {
                 lg2: 'flex',
               }}
             >
-              <Button variant="nav">Account Login</Button>
+              <Button variant="nav">
+                <Link href="/login"
+                  _hover={{
+                    textDecoration: 'none',
+                  }}
+                >
+                  Account Login
+                </Link>
+              </Button>
 
-              <Button variant="nav">Vendor Login</Button>
+              <Button variant="nav">
+                <Link href="/login"
+                  _hover={{
+                  textDecoration: 'none',
+                }}
+              >
+                Vendor Login
+              </Link>
+            </Button>
             </HStack>
 
             <Box ml="5">
