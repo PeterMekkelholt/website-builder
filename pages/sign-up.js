@@ -9,11 +9,9 @@ import Subscribe from '../lib/mailerlite'
 //import Navbar from '../components/Navbar';
 //builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 import {
-  //Button,
   FormControl,
-  //Input,
   FormLabel,
-  Flex,
+//  Flex,
   Box,
   Stack,
   Heading,
@@ -26,7 +24,7 @@ import {
   FormHelperText,
   FormErrorMessage,
   Checkbox,
-  CheckboxGroup,
+//  CheckboxGroup,
   SimpleGrid,
   Button,
 } from '@chakra-ui/react'
@@ -47,7 +45,7 @@ export default function Page({ page }) {
         console.log(res)
         toast({
           title: 'Sign Up Successful.',
-          description: "We've added your email to our mailing list.",
+          description: "Congratulations, you're signed up. We'll be in touch shortly.",
           status: 'success',
           duration: 5000,
           isClosable: true,
