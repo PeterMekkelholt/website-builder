@@ -95,16 +95,24 @@ export const M49_nav = (props) => {
               }}
             >
               <Button variant="nav">
-              <Link href="/login"
-                _hover={{
-                  textDecoration: 'none',
-                }}
-              >
-                Account Login
+                <Link href="/login"
+                  _hover={{
+                    textDecoration: 'none',
+                  }}
+                >
+                  Account Login
                 </Link>
               </Button>
 
-              <Button variant="nav">Vendor Login</Button>
+              <Button variant="nav">
+                <Link href="/login"
+                  _hover={{
+                  textDecoration: 'none',
+                }}
+              >
+                Vendor Login
+              </Link>
+            </Button>
             </HStack>
 
             <Box ml="5">
