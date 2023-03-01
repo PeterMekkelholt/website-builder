@@ -11,7 +11,7 @@ import Subscribe from '../lib/mailerlite'
 import {
   FormControl,
   FormLabel,
-//  Flex,
+  //  Flex,
   Box,
   Stack,
   Heading,
@@ -24,7 +24,7 @@ import {
   FormHelperText,
   FormErrorMessage,
   Checkbox,
-//  CheckboxGroup,
+  //  CheckboxGroup,
   SimpleGrid,
   Button,
 } from '@chakra-ui/react'
@@ -45,7 +45,8 @@ export default function Page({ page }) {
         console.log(res)
         toast({
           title: 'Sign Up Successful.',
-          description: "Congratulations, you're signed up. We'll be in touch shortly.",
+          description:
+            "Congratulations, you're signed up. We'll be in touch shortly.",
           status: 'success',
           duration: 5000,
           isClosable: true,
@@ -133,20 +134,13 @@ export default function Page({ page }) {
         position="relative"
         top="0em"
         transition="0.5s linear"
-        // boxShadow="lg"
         padding="2em"
       >
         <Center>
           <Logo></Logo>
         </Center>
-        {/* <Text>Test</Text> */}
       </Box>
-      <Box
-        bgColor="white"
-        as="section"
-        padding="2em 0"
-        // minH="200px"
-      >
+      <Box bgColor="white" as="section" padding="2em 0">
         <Stack as={Box} textAlign={'center'} spacing={{ base: 2, md: 4 }}>
           <Heading
             as="h2"
@@ -182,11 +176,10 @@ export default function Page({ page }) {
             md: '8',
           }}
         >
-                
-        <form onSubmit={handleSubmit(onSubmit)} method="post">
-        <Container>
-            <SimpleGrid columns={[1, 1, 2]} spacing={20}>
-              <Stack spacing={5} direction="column">
+          <form onSubmit={handleSubmit(onSubmit)} method="post">
+            <Container>
+              <SimpleGrid columns={[1, 1, 2]} spacing={20}>
+                <Stack spacing={5} direction="column">
                   <FormControl
                     variant="floating"
                     id="email"
@@ -200,7 +193,6 @@ export default function Page({ page }) {
                     <FormErrorMessage>Your email is invalid</FormErrorMessage>
                     {/* <input {...register('email')}></input> */}
                   </FormControl>
-
 
                   <FormControl
                     variant="floating"
@@ -223,7 +215,7 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                    >
+                  >
                     <Input placeholder=" " {...register('last_name')} />
                     <FormLabel htmlFor="last">Last name:</FormLabel>
                     <FormHelperText>Doe</FormHelperText>
@@ -238,7 +230,7 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                    >
+                  >
                     <Input placeholder=" " {...register('company_name')} />
                     <FormLabel htmlFor="last">Company name:</FormLabel>
                     <FormHelperText>Acme Co</FormHelperText>
@@ -253,7 +245,7 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                    >
+                  >
                     <Input placeholder=" " {...register('role')} />
                     <FormLabel htmlFor="last">Role:</FormLabel>
                     <FormHelperText>Manager</FormHelperText>
@@ -266,7 +258,7 @@ export default function Page({ page }) {
                     isRequired
                     // isInvalid
                     pb="1em"
-                    >
+                  >
                     <Textarea placeholder=" " {...register('message')} />
                     <FormLabel htmlFor="last">Message:</FormLabel>
                     <FormHelperText>How can we help?</FormHelperText>
@@ -275,27 +267,29 @@ export default function Page({ page }) {
                     </FormErrorMessage>
                     {/* <input {...register('message')} type="textarea"></input> */}
                   </FormControl>
-              </Stack>
-
-              <Box>
-                <Stack spacing={5} direction="column">
-                  <Checkbox {...register('product_1_plan')}>Plan</Checkbox>
-                  <Checkbox {...register('product_2_select')}>Select</Checkbox>
-                  <Checkbox {...register('product_3_fund')}>Fund</Checkbox>
-                  <Checkbox {...register('product_4_scale')}>Scale</Checkbox>
                 </Stack>
-              </Box>
-            </SimpleGrid>
-            <Button
-              type="submit"
-              width="fit-content"
-              mt="2em"
-              variant="carbon"
+
+                <Box>
+                  <Stack spacing={5} direction="column">
+                    <Checkbox {...register('product_1_plan')}>Plan</Checkbox>
+                    <Checkbox {...register('product_2_select')}>
+                      Select
+                    </Checkbox>
+                    <Checkbox {...register('product_3_fund')}>Fund</Checkbox>
+                    <Checkbox {...register('product_4_scale')}>Scale</Checkbox>
+                  </Stack>
+                </Box>
+              </SimpleGrid>
+              <Button
+                type="submit"
+                width="fit-content"
+                mt="2em"
+                variant="carbon"
               >
-              {isSubmitting ? 'Submitting' : 'Submit'}
-            </Button>
-          </Container>
-        </form>
+                {isSubmitting ? 'Submitting' : 'Submit'}
+              </Button>
+            </Container>
+          </form>
         </Box>
       </Box>
 
