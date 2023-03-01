@@ -47,7 +47,7 @@ export default function Page({ page }) {
         toast({
           title: 'Sign Up Successful.',
           description:
-            "Congratulations, you're signed up. We'll be in touch shortly.",
+            "Thanks for reaching out. We'll be in touch shortly.",
           status: 'success',
           duration: 5000,
           isClosable: true,

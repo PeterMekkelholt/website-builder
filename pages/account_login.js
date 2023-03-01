@@ -33,7 +33,7 @@ export default function Page({ page }) {
   function login() {
     toast({
       title: 'Login Unsuccessful.',
-      description: 'Apologies the Vendor Area is currently offline .',
+      description: 'Apologies, this area is currently offline.',
       status: 'error',
       duration: 5000,
       isClosable: true,
