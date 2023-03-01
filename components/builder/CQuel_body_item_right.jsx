@@ -101,11 +101,12 @@ const Body_Item = (props) => {
               height="250px"
               boxShadow="lg"
               borderRadius="xl"
+              overflow="hidden"
             >
               <Center>
                 <Image
                   height="250px"
-                  padding="2em"
+                  // padding="2em"
                   objectFit="cover"
                   src={props.item_image}
                   alt="Alt"
