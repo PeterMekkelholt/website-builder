@@ -27,6 +27,7 @@ import {
   //  CheckboxGroup,
   SimpleGrid,
   Button,
+  Link,
 } from '@chakra-ui/react'
 import { Logo } from '../components/Logo'
 
@@ -137,7 +138,9 @@ export default function Page({ page }) {
         padding="2em"
       >
         <Center>
-          <Logo></Logo>
+          <Link href="/" passHref>
+            <Logo></Logo>
+          </Link>
         </Center>
       </Box>
       <Box bgColor="white" as="section" padding="2em 0">
