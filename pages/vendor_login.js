@@ -168,7 +168,6 @@ export default function Page({ page }) {
                   </FormControl>
                   <Center>
                     <Button
-                      type="submit"
                       width="fit-content"
                       mt="2em"
                       variant="carbon"
