@@ -77,6 +77,7 @@ export const CQuel_signup = (props) => {
               letterSpacing="tight"
               fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}
               lineHeight={'110%'}
+              zIndex="9999"
             >
               {props.signup_title}
             </Heading>
@@ -86,6 +87,7 @@ export const CQuel_signup = (props) => {
               mt="4"
               fontSize="lg"
               fontWeight="regular"
+              zIndex="9999"
             >
               {props.signup_body}
             </Text>
@@ -103,7 +105,7 @@ export const CQuel_signup = (props) => {
                   />
                 </FormControl>
                 <Button
-                  fontSize=".75em"
+                  // fontSize=".75em"
                   type="submit"
                   colorScheme="gray"
                   width="150px"

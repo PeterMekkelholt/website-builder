@@ -73,7 +73,7 @@ const theme = extendTheme({
         },
         white: {
           bg: 'white',
-          color: 'brand.carbon',
+          color: 'brand.darkBlue',
           rounded: 'full',
           fontWeight: '800',
           px: '35px',

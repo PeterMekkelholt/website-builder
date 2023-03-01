@@ -1,15 +1,15 @@
 import { Center } from '@chakra-ui/react'
-import { HinesLogo } from '../HinesLogo'
+import { HinesLogoAlt } from '../HinesLogo'
 
 export const CQuel_hines = (props) => {
   return (
     <Center
-      bgColor="brand.lightBlue"
+      bgColor="brand.gradient2"
       as="section"
       padding="2em 0"
       // minH="200px"
     >
-      <HinesLogo></HinesLogo>
+      <HinesLogoAlt></HinesLogoAlt>
     </Center>
   )
 }
