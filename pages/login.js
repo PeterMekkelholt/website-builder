@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import Head from 'next/head';
+import React, { useState } from 'react'
+import Head from 'next/head'
 import { ToastContainer } from 'react-toastify'
 //import { BuilderComponent, builder, useIsPreviewing, Builder } from '@builder.io/react';
 //import Navbar from '../components/Navbar';
@@ -11,8 +11,16 @@ import {
   InputGroup,
   InputRightElement,
   FormLabel,
-  //Flex,
+  Box,
+  Flex,
+  Center,
+  Stack,
+  Heading,
   useToast,
+  Container,
+  SimpleGrid,
+  FormHelperText,
+  FormErrorMessage,
 } from '@chakra-ui/react'
 import { Logo } from '../components/Logo'
 
@@ -24,14 +32,14 @@ export default function Page({ page }) {
   function login() {
     toast({
       title: 'Login Unsuccessful.',
-      description: "Apologies the Vendor Area is currently offline .",
+      description: 'Apologies the Vendor Area is currently offline .',
       status: 'error',
       duration: 5000,
       isClosable: true,
     })
   }
   return (
-      <>
+    <>
       <Head>
         <title>CQuel Login</title>
         <meta name="description" content="CQuel Sign Up" />
@@ -78,37 +86,104 @@ export default function Page({ page }) {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-  {/* <Navbar /> */}
-  <ToastContainer />
-  <form>
-    <FormControl>
-    <FormLabel htmlFor="email">Email address</FormLabel>
-    <input id="email" ></input>
-  </FormControl>
-  <FormControl>
-    <FormLabel htmlFor="Password">Password:</FormLabel>
-    <InputGroup size='md'>
-      <Input
-        pr='4.5rem'
-        type={show ? 'text' : 'password'}
-        placeholder='Enter password'
-        />
-      <InputRightElement width='4.5rem'>
-        <Button h='1.75rem' size='sm' onClick={handleClick}>
-          {show ? 'Hide' : 'Show'}
-        </Button>
-      </InputRightElement>
-    </InputGroup>
-    </FormControl>
-    </form>
+      {/* <Navbar /> */}
+      <ToastContainer />
+      <Box
+        as="header"
+        zIndex={'1'}
+        bg="white"
+        position="relative"
+        top="0em"
+        transition="0.5s linear"
+        padding="2em"
+      >
+        <Center>
+          <Logo></Logo>
+        </Center>
+      </Box>
+      <Box bgColor="white" as="section" padding="2em 0" height="100vh">
+        <Stack as={Box} textAlign={'center'} spacing={{ base: 2, md: 4 }}>
+          <Heading
+            as="h2"
+            fontFamily="Poppins"
+            size="2xl"
+            color="brand.darkBlue"
+            fontWeight="extrabold"
+            letterSpacing="tight"
+            fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}
+            lineHeight={'110%'}
+          >
+            Vendor Login
+          </Heading>
+        </Stack>
+        <Box
+          as="section"
+          bg="bg-surface"
+          pt="12"
+          pb={{
+            base: '4',
+            md: '8',
+          }}
+        >
+          <Container>
+            <SimpleGrid columns={1} spacing={20}>
+              <Stack spacing={5} direction="column">
+                <form>
+                  <FormControl variant="floating" id="email" pb="2em">
+                    <Input placeholder=" " />
+                    <FormLabel>Email address</FormLabel>
 
+                    <FormErrorMessage>Your email is invalid</FormErrorMessage>
+                    {/* <input {...register('email')}></input> */}
+                  </FormControl>
+                  <FormControl variant="floating" id="password" pb="2em">
+                    {/* <InputGroup size="md">
+                      <Input
+                        pr="4.5rem"
+                        type={show ? 'text' : 'password'}
+                        placeholder=" "
+                      />
+                      <InputRightElement width="4.5rem">
+                        <Button h="1.75rem" size="sm" onClick={handleClick}>
+                          {show ? 'Hide' : 'Show'}
+                        </Button>
+                      </InputRightElement>
+                    </InputGroup> */}
+                    <InputGroup>
+                      <Input
+                        pr="4.5rem"
+                        type={show ? 'text' : 'password'}
+                        placeholder=" "
+                      />
+                      <FormLabel htmlFor="Password">Password</FormLabel>
+                      <InputRightElement width="4.5rem">
+                        <Button h="1.75rem" size="sm" onClick={handleClick}>
+                          {show ? 'Hide' : 'Show'}
+                        </Button>
+                      </InputRightElement>
+                    </InputGroup>
+                  </FormControl>
+                  <Center>
+                    <Button
+                      type="submit"
+                      width="fit-content"
+                      mt="2em"
+                      variant="carbon"
+                      onClick={login}
+                    >
+                      Log in
+                    </Button>
+                  </Center>
+                </form>
+              </Stack>
+            </SimpleGrid>
+          </Container>
+        </Box>
+      </Box>
 
-
-  <button role="submit" onClick={login}>Log in</button>
-
-{/* 
+      {/* 
 <BuilderComponent model="footer" />
 */}
-      </>
-    );
-  }
+    </>
+  )
+}
