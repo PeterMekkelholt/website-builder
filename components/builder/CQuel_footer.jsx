@@ -12,6 +12,7 @@ import {
   ButtonGroup,
   Flex,
   Text,
+  Center,
   useColorModeValue,
 } from '@chakra-ui/react'
 
@@ -53,11 +54,17 @@ export const CQuel_footer = (props) => {
           mb="2em"
         >
           <Flex flexDirection="row" justifyContent="space-between">
-            <Logo
-              height="70px"
-              color={useColorModeValue('gray.700', 'white')}
-            />
-            <Flex flexDirection="row" gap={10} mt="2em">
+            <Box display={{ base: 'none', sm: 'none', md: 'inline' }}>
+              <Logo height="70px" />
+            </Box>
+
+            <Flex
+              flexDirection="row"
+              gap={10}
+              mt="2em"
+              width="100%"
+              justifyContent={{ base: 'center', sm: 'center', md: 'right' }}
+            >
               <Button width="fit-content" variant="white">
                 Contact us
               </Button>
@@ -78,20 +85,6 @@ export const CQuel_footer = (props) => {
                 />
               </ButtonGroup>
             </Flex>
-
-            {/* <ButtonGroup variant="ghost" color="white">
-              <IconButton
-                as="a"
-                href={props.footer_URL}
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-                icon={<FaLinkedin fontSize="40px" />}
-                _hover={{
-                  color: 'grey',
-                }}
-              />
-            </ButtonGroup> */}
           </Flex>
         </Flex>
       </Box>
