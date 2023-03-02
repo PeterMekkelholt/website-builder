@@ -31,10 +31,11 @@ export const M49_nav = (props) => {
   //   visible: show,
   //   shouldFocus: true,
   // })
+  const { nav_items } = props
   return (
     <Box
       as="header"
-      zIndex={'9999'}
+      zIndex={'1'}
       bg="white"
       position="sticky"
       top="0em"
@@ -65,8 +66,8 @@ export const M49_nav = (props) => {
                   textDecoration: 'none',
                 }}
               >
-                <VisuallyHidden>{props.brand_title}</VisuallyHidden>
-                <Logo></Logo>
+                <VisuallyHidden>{props?.brand_title}</VisuallyHidden>
+                <Logo height="60px"></Logo>
               </Link>
             </Box>
             <HStack
@@ -76,16 +77,16 @@ export const M49_nav = (props) => {
               }}
               spacing="8"
             >
-              {props.thing.map((menu, idx) => (
+              {nav_items?.map((menu, idx) => (
                 <div key={idx}>
                   <NavLink.Desktop active={menu.url}>
-                    {menu.caption}{' '}
+                    {menu.caption}
                   </NavLink.Desktop>
                 </div>
               ))}
             </HStack>
           </HStack>
-          {/* <Flex align="center">
+          <Flex align="center">
             <HStack
               spacing="8"
               display={{
@@ -93,12 +94,26 @@ export const M49_nav = (props) => {
                 lg2: 'flex',
               }}
             >
-              <Button colorScheme="green" rounded="full">
-                Sign Up
+              <Button variant="nav">
+                <Link
+                  href="/account_login"
+                  _hover={{
+                    textDecoration: 'none',
+                  }}
+                >
+                  Account Login
+                </Link>
               </Button>
 
-              <Button colorScheme="green" rounded="full">
-                Sign In
+              <Button variant="nav">
+                <Link
+                  href="/vendor_login"
+                  _hover={{
+                    textDecoration: 'none',
+                  }}
+                >
+                  Vendor Login
+                </Link>
               </Button>
             </HStack>
 
@@ -159,10 +174,10 @@ export const M49_nav = (props) => {
                           sm: 2,
                         }}
                       >
-                        {props.thing.map((menu, idx) => (
+                        {nav_items?.map((menu, idx) => (
                           <div key={idx}>
                             <NavLink.Desktop active={menu.url}>
-                              {menu.caption}{' '}
+                              {menu.caption}
                             </NavLink.Desktop>
                           </div>
                         ))}
@@ -170,12 +185,12 @@ export const M49_nav = (props) => {
                       <VStack mt="8" spacing="4">
                         <NextLink href="#" passHref>
                           <Button colorScheme="green" rounded="full">
-                            Sign Up
+                            Account Login
                           </Button>
                         </NextLink>
                         <NextLink href="#" passHref>
                           <Button colorScheme="green" rounded="full">
-                            Sign In
+                            Vendor Login
                           </Button>
                         </NextLink>
                       </VStack>
@@ -184,7 +199,7 @@ export const M49_nav = (props) => {
                 </FocusLock>
               </Transition>
             </Box>
-          </Flex> */}
+          </Flex>
         </Flex>
       </Box>
     </Box>

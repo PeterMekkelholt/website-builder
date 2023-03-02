@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
 import {
   Box,
   Button,
   Heading,
-  Container,
   Stack,
   Text,
   Center,
@@ -14,7 +12,13 @@ import {
 
 const Body_Item = (props) => {
   return (
-    <Box width="100%" height="100%" bgColor="white">
+    <Box
+      width="100%"
+      height="100%"
+      bgColor="white"
+      padding="2em"
+      //padding={{ base: '2em 0', md: '2em 0', lg: '3em' }}
+    >
       <Box
         maxW={{
           base: 'xl',
@@ -27,10 +31,6 @@ const Body_Item = (props) => {
         }}
       >
         <Stack
-          // direction={{
-          //   sm: 'column',
-          //   md: 'row',
-          // }}
           flexDirection={{
             base: 'column-reverse',
             md: 'column-reverse',
@@ -57,17 +57,8 @@ const Body_Item = (props) => {
             maxW={{
               lg: '520px',
             }}
+            mt="2em"
           >
-            <Text
-              size="xs"
-              textTransform="uppercase"
-              fontWeight="semibold"
-              color="#98D897"
-              letterSpacing="wide"
-              pb="2em"
-            >
-              {props.item_number}
-            </Text>
             <Heading
               as="h2"
               fontFamily="Poppins"
@@ -89,6 +80,9 @@ const Body_Item = (props) => {
             >
               {props.item_description}
             </Text>
+            <Button width="fit-content" mt="2em" variant="carbon">
+              {props.item_button}
+            </Button>
           </Flex>
           <Center
             width="100%"
@@ -103,16 +97,16 @@ const Body_Item = (props) => {
                 sm: '0',
                 md: '3em',
               }}
-              width="325px"
+              width="390px"
               height="250px"
               boxShadow="lg"
               borderRadius="xl"
+              overflow="hidden"
             >
-              {' '}
               <Center>
                 <Image
                   height="250px"
-                  padding="2em"
+                  // padding="2em"
                   objectFit="cover"
                   src={props.item_image}
                   alt="Alt"

@@ -7,7 +7,7 @@ export const CQuel_nav = (props) => {
   return (
     <Box
       as="header"
-      zIndex={'9999'}
+      zIndex={'1'}
       bg="white"
       position="sticky"
       top="0em"
@@ -38,7 +38,7 @@ export const CQuel_nav = (props) => {
                   textDecoration: 'none',
                 }}
               >
-                <VisuallyHidden>{props.brand_title}</VisuallyHidden>
+                <VisuallyHidden>{props?.brand_title}</VisuallyHidden>
                 <Logo></Logo>
               </Link>
             </Box>
@@ -49,7 +49,7 @@ export const CQuel_nav = (props) => {
               }}
               spacing="8"
             >
-              {props.thing.map((menu, idx) => (
+              {props?.thing?.map((menu, idx) => (
                 <div key={idx}>
                   <NavLink.Desktop active={menu.url}>
                     {menu.caption}{' '}

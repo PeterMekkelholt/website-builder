@@ -13,7 +13,9 @@ import {
   Flex,
   useColorModeValue as mode,
   useToast,
+  Center,
 } from '@chakra-ui/react'
+import HexagonSection from '../HexagonSection'
 
 export const CQuel_signup = (props) => {
   const [email, setEmail] = useState('')
@@ -53,65 +55,78 @@ export const CQuel_signup = (props) => {
       })
   }
   return (
-    <Box
-      bgColor="rgb(100, 161, 207, .25)"
+    // <HexagonSection>
+    <Center
+      // bgColor="rgb(100, 161, 207, .25)"
       as="section"
-      pt="16"
-      pb="2em"
-      minH="400px"
+      // pt="16"
+      // pb="2em"
+      // minH="400px"
     >
-      <Container maxW={'3xl'}>
-        <ToastContainer />
+      <HexagonSection width="100%">
+        <Container maxW={'3xl'}>
+          <ToastContainer />
 
-        <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 14 }}>
-          <Heading
-            as="h2"
-            fontFamily="Poppins"
-            size="2xl"
-            color="#284863"
-            fontWeight="extrabold"
-            letterSpacing="tight"
-            fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}
-            lineHeight={'110%'}
-          >
-            {props.signup_title}
-          </Heading>
-          <Text
-            as="p"
-            color={mode('gray.600', 'gray.400')}
-            mt="4"
-            fontSize="lg"
-            fontWeight="regular"
-          >
-            {props.signup_body}
-          </Text>
-          <Flex flexDirection="column">
-            <Flex flexDirection="row" w="100%">
-              <FormControl id="email" pr="2">
-                <Input
-                  backgroundColor="white"
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={email}
-                  placeholder="hello@email.com"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </FormControl>
-              <Button
-                fontSize=".75em"
-                type="submit"
-                colorScheme="gray"
-                width="150px"
-                onClick={subscribeEmail}
-              >
-                subscribe
-              </Button>
+          <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 14 }}>
+            <Heading
+              as="h2"
+              fontFamily="Poppins"
+              size="2xl"
+              color="#284863"
+              fontWeight="extrabold"
+              letterSpacing="tight"
+              fontSize={{ base: 'xl', sm: '3xl', md: '4xl' }}
+              lineHeight={'110%'}
+              zIndex="9999"
+            >
+              {props.signup_title}
+            </Heading>
+            <Text
+              as="p"
+              color={mode('gray.600', 'gray.400')}
+              mt="4"
+              fontSize="lg"
+              fontWeight="regular"
+              zIndex="9999"
+            >
+              {props.signup_body}
+            </Text>
+            <Flex flexDirection="column">
+              <Flex flexDirection="row" w="100%">
+                <FormControl id="email" pr="2">
+                  <Input
+                    backgroundColor="white"
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={email}
+                    placeholder="hello@email.com"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </FormControl>
+                <Button
+                  // fontSize=".75em"
+                  type="submit"
+                  colorScheme="gray"
+                  width="150px"
+                  onClick={subscribeEmail}
+                >
+                  Subscribe
+                </Button>
+              </Flex>
             </Flex>
-          </Flex>
-        </Stack>
-      </Container>
-    </Box>
+          </Stack>
+        </Container>
+      </HexagonSection>
+      {/* <HexagonSection
+        w="full"
+        h="full"
+        objectFit="cover"
+        objectPosition="top bottom"
+        position="absolute"
+      ></HexagonSection> */}
+    </Center>
+    // </HexagonSection>
   )
 }
 

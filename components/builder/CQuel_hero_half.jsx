@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { HiArrowRight } from 'react-icons/hi'
 
-export const CQuel_Hero = (props) => {
+export const CQuel_Hero_Half = (props) => {
   return (
     <Box
       as="section"
@@ -45,7 +45,7 @@ export const CQuel_Hero = (props) => {
             fontFamily="Poppins"
             size="3xl"
             lineHeight="1"
-            fontWeight="extrabold"
+            fontWeight="bold"
             letterSpacing="tight"
           >
             <Text
@@ -62,18 +62,18 @@ export const CQuel_Hero = (props) => {
             mt="8"
           >
             <Button
-              size="lg"
-              backgroundColor="white"
-              fontFamily="Poppins"
-              color="#284863"
-              boxShadow="lg"
-              // colorScheme="blue"
-              height="14"
-              px="8"
-              fontSize="md"
-              _hover={{
-                boxShadow: 'xl',
-              }}
+              // size="lg"
+              // backgroundColor="white"
+              // fontFamily="Poppins"
+              // color="#284863"
+              // boxShadow="lg"
+              // height="14"
+              // px="8"
+              // fontSize="md"
+              // _hover={{
+              //   boxShadow: 'xl',
+              // }}
+              variant="carbon"
             >
               {props.hero_CTA}
             </Button>
@@ -125,4 +125,4 @@ function createMarkup(content) {
   return { __html: content }
 }
 
-export default CQuel_Hero
+export default CQuel_Hero_Half

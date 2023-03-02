@@ -11,7 +11,7 @@ const DesktopNavLink = (props) => {
   const { active, ...rest } = props
   return (
     <chakra.a
-      href="#"
+      href={active}
       aria-current={active ? 'page' : undefined}
       fontWeight="semibold"
       color={mode('gray.600', 'gray.300')}
