@@ -21,7 +21,7 @@ export const Step = (props) => {
         md: '5',
       }}
       height="85px"
-      w="220px"
+      w="245px"
       borderRight={{
         md: '1px solid #e9e9e9',
         sm: 'none',
