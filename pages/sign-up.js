@@ -187,20 +187,17 @@ export default function Page({ page }) {
                     variant="floating"
                     id="email"
                     isRequired
-                    // isInvalid
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('email')} />
                     <FormLabel>Email address</FormLabel>
                     <FormHelperText>email@domain.com</FormHelperText>
                     <FormErrorMessage>Your email is invalid</FormErrorMessage>
-                    {/* <input {...register('email')}></input> */}
                   </FormControl>
 
                   <FormControl
                     variant="floating"
                     id="first_name"
-                    isRequired
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('first_name')} />
@@ -214,7 +211,6 @@ export default function Page({ page }) {
                   <FormControl
                     variant="floating"
                     id="last_name"
-                    isRequired
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('last_name')} />
@@ -228,7 +224,6 @@ export default function Page({ page }) {
                   <FormControl
                     variant="floating"
                     id="company_name"
-
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('company_name')} />
@@ -242,7 +237,6 @@ export default function Page({ page }) {
                   <FormControl
                     variant="floating"
                     id="role"
-                    isRequired
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('role')} />
