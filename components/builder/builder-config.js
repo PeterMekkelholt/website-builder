@@ -25,6 +25,42 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
+  dynamic(() => import('./CQuel_h2')),
+  {
+    name: 'CQuel H2 Heading',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    inputs: [
+      {
+        name: 'h2_title',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Title Text',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./CQuel_richtext')),
+  {
+    name: 'CQuel Rich Text',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    inputs: [
+      {
+        name: 'CQuel_richText',
+        type: 'richText',
+        required: true,
+        defaultValue: 'Enter your copy here ... ',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
   dynamic(() => import('./CQuel_hero_full')),
   {
     name: 'CQuel Hero Full',
@@ -698,6 +734,9 @@ Builder.register('insertMenu', {
   items: [
     { name: 'CQuel Hero Half' },
     { name: 'CQuel Hero Full' },
+    { name: 'CQuel H1 Heading' },
+    { name: 'CQuel H2 Heading' },
+    { name: 'CQuel Rich Text' },
     { name: 'CQuel CTA' },
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },

@@ -1,11 +1,13 @@
 import { Box } from '@chakra-ui/react'
 
-export const CQuel_body = (props) => {
+export const CQuel_h1 = (props) => {
   return (
-    <Box as="section" minH="400px">
-      {props.h1_title}
+    <Box as="section">
+      <h1>
+        {props.h1_title}
+        </h1>
     </Box>
   )
 }
 
-export default CQuel_body
+export default CQuel_h1
