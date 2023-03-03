@@ -39,7 +39,7 @@ export const CQuel_footer = (props) => {
             fontWeight="regular"
             margin="1em 0"
           >
-            {props.footer_copy}
+            {<div dangerouslySetInnerHTML={createMarkup(props.footer_copy)}></div>}
           </Text>
         </Container>
 
@@ -91,5 +91,10 @@ export const CQuel_footer = (props) => {
     </Box>
   )
 }
+
+function createMarkup(content) {
+  return {__html: content};
+}
+
 
 export default CQuel_footer
