@@ -201,7 +201,6 @@ export default function Page({ page }) {
                     variant="floating"
                     id="first_name"
                     isRequired
-                    // isInvalid
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('first_name')} />
@@ -210,13 +209,12 @@ export default function Page({ page }) {
                     <FormErrorMessage>
                       Your first name is invalid
                     </FormErrorMessage>
-                    {/* <input {...register('first_name')}></input> */}
                   </FormControl>
+
                   <FormControl
                     variant="floating"
                     id="last_name"
                     isRequired
-                    // isInvalid
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('last_name')} />
@@ -225,13 +223,12 @@ export default function Page({ page }) {
                     <FormErrorMessage>
                       Your last name is invalid
                     </FormErrorMessage>
-                    {/* <input {...register('last_name')}></input> */}
                   </FormControl>
+
                   <FormControl
                     variant="floating"
                     id="company_name"
-                    isRequired
-                    // isInvalid
+
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('company_name')} />
@@ -240,26 +237,23 @@ export default function Page({ page }) {
                     <FormErrorMessage>
                       Your Company name is invalid
                     </FormErrorMessage>
-                    {/* <input {...register('company_name')}></input> */}
                   </FormControl>
+
                   <FormControl
                     variant="floating"
                     id="role"
                     isRequired
-                    // isInvalid
                     pb="1em"
                   >
                     <Input placeholder=" " {...register('role')} />
                     <FormLabel htmlFor="last">Role:</FormLabel>
                     <FormHelperText>Manager</FormHelperText>
                     <FormErrorMessage>Please add a role.</FormErrorMessage>
-                    {/* <input {...register('role')}></input> */}
                   </FormControl>
+
                   <FormControl
                     variant="floating"
                     id="role"
-                    isRequired
-                    // isInvalid
                     pb="1em"
                   >
                     <Textarea placeholder=" " {...register('message')} />
