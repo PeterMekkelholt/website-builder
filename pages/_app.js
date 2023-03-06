@@ -129,7 +129,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Text fontSize="md">
         <CookieConsent
-          // debug={true}
+          debug={true}
           location="bottom"
           buttonText="I Understand"
           cookieName="CquelCookie"
@@ -147,6 +147,7 @@ function MyApp({ Component, pageProps }) {
             boxShadow: '0 3px 10px 0 rgb(0 0 0 / 32%)',
             alignItems: 'center',
             justifyContent: 'center',
+            zIndex: '9999',
           }}
           contentStyle={
             {
