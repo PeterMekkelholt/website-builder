@@ -41,7 +41,7 @@ export const Step = (props) => {
         >
           <Text
             className={quicksand.className}
-            fontFamily="Poppins"
+            // fontFamily="Poppins"
             fontSize={{
               base: 'lg',
               md: 'xl',
