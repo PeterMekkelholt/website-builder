@@ -241,12 +241,10 @@ export default function Page({ page }) {
 
                 <Box>
                   <Stack spacing={5} direction="column">
-                    <Checkbox {...register('product_1_plan')}>Plan</Checkbox>
-                    <Checkbox {...register('product_2_select')}>
-                      Select
-                    </Checkbox>
-                    <Checkbox {...register('product_3_fund')}>Fund</Checkbox>
-                    <Checkbox {...register('product_4_scale')}>Scale</Checkbox>
+                    <Checkbox {...register('product_1_plan')}>Plan with CQuel Vision</Checkbox>
+                    <Checkbox {...register('product_2_select')}>Select with CQuel Bridge</Checkbox>
+                    <Checkbox {...register('product_3_fund')}>Fund with CQuel Accelerate</Checkbox>
+                    <Checkbox {...register('product_4_scale')}>Scale with CQuel Pro</Checkbox>
                   </Stack>
                 </Box>
               </SimpleGrid>
