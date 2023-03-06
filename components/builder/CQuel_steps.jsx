@@ -48,14 +48,11 @@ export const CQuel_Steps = (props) => {
         >
           <Heading
             as="h2"
-            //fontFamily="Poppins"
-            // size="2xl"
             color="brand.lightBlue"
             fontWeight="extrabold"
             letterSpacing="tight"
             fontSize={{ base: 'xl', sm: '3xl', md: '5xl' }}
             lineHeight={'110%'}
-            // size="2xl"
             my={8}
           >
             {subHeading}

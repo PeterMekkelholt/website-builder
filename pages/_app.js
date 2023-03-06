@@ -4,8 +4,9 @@ import { GoogleAnalytics } from 'nextjs-google-analytics'
 import { hotjar } from 'react-hotjar'
 import { useEffect } from 'react'
 import '../styles/globals.css'
+import CookieConsent from 'react-cookie-consent'
 import '../components/builder/builder-config'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, Text, Link } from '@chakra-ui/react'
 
 const activeLabelStyles = {
   transform: 'scale(0.85) translateY(-24px)',
@@ -126,6 +127,71 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider theme={theme} className={[poppins.className]}>
       <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
+      <Text fontSize="md">
+        <CookieConsent
+          // debug={true}
+          location="bottom"
+          buttonText="I Understand"
+          cookieName="CquelCookie"
+          buttonClasses=""
+          style={{
+            // fontFamily: 'Poppins',
+            background: '#1b2738',
+            marginBottom: '20px',
+            marginLeft: '5%',
+            marginRight: '5%',
+            width: '90%',
+            borderRadius: '15px',
+            paddingLeft: '10px',
+            paddingRight: '10px',
+            boxShadow: '0 3px 10px 0 rgb(0 0 0 / 32%)',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          contentStyle={
+            {
+              // color: 'red',
+            }
+          }
+          buttonStyle={{
+            color: '#3A3A4A',
+            backgroundColor: 'white',
+            borderRadius: '50px',
+            padding: '10px 40px',
+            fontWeight: '600',
+            transition: 'ease all 0.25s',
+            _hover: {
+              bg: 'brand.lightBlue',
+              boxShadow: 'md',
+            },
+          }}
+          expires={150}
+        >
+          This site uses cookies to provide you with a better user experience.
+          For more information, refer to our
+          <Link href="/terms" passHref color={'brand.lightBlue'}>
+            {' '}
+            Terms of Use
+          </Link>{' '}
+          and{' '}
+          <Link href="/privacy" passHref color={'brand.lightBlue'}>
+            Privacy Policy
+          </Link>
+        </CookieConsent>
+        {/* <CookieConsent
+          location="bottom"
+          buttonText="Sure man!!"
+          cookieName="myAwesomeCookieName2"
+          style={{ background: '#2B373B' }}
+          buttonStyle={{ color: '#4e503b', fontSize: '13px' }}
+          expires={150}
+        >
+          This website uses cookies to enhance the user experience.{' '}
+          <span style={{ fontSize: '10px' }}>
+            This bit of text is smaller :O
+          </span>
+        </CookieConsent> */}
+      </Text>
     </ChakraProvider>
   )
 }

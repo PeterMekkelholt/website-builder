@@ -108,7 +108,7 @@ export default function Page({ page }) {
         <Stack as={Box} textAlign={'center'} spacing={{ base: 2, md: 4 }}>
           <Heading
             as="h2"
-            fontFamily="Poppins"
+            // fontFamily="Poppins"
             size="2xl"
             color="brand.darkBlue"
             fontWeight="extrabold"

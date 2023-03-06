@@ -61,7 +61,7 @@ const Body_Item = (props) => {
           >
             <Heading
               as="h2"
-              fontFamily="Poppins"
+              // fontFamily="Poppins"
               size="2xl"
               color="#284863"
               fontWeight="extrabold"

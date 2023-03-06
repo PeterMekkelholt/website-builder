@@ -46,8 +46,7 @@ export default function Page({ page }) {
         console.log(res)
         toast({
           title: 'Sign Up Successful.',
-          description:
-            "Thanks for reaching out. We'll be in touch shortly.",
+          description: "Thanks for reaching out. We'll be in touch shortly.",
           status: 'success',
           duration: 5000,
           isClosable: true,
@@ -147,7 +146,7 @@ export default function Page({ page }) {
         <Stack as={Box} textAlign={'center'} spacing={{ base: 2, md: 4 }}>
           <Heading
             as="h2"
-            fontFamily="Poppins"
+            // fontFamily="Poppins"
             size="2xl"
             color="brand.darkBlue"
             fontWeight="extrabold"
@@ -195,11 +194,7 @@ export default function Page({ page }) {
                     <FormErrorMessage>Your email is invalid</FormErrorMessage>
                   </FormControl>
 
-                  <FormControl
-                    variant="floating"
-                    id="first_name"
-                    pb="1em"
-                  >
+                  <FormControl variant="floating" id="first_name" pb="1em">
                     <Input placeholder=" " {...register('first_name')} />
                     <FormLabel htmlFor="first">First name:</FormLabel>
                     <FormHelperText>Jane</FormHelperText>
@@ -208,11 +203,7 @@ export default function Page({ page }) {
                     </FormErrorMessage>
                   </FormControl>
 
-                  <FormControl
-                    variant="floating"
-                    id="last_name"
-                    pb="1em"
-                  >
+                  <FormControl variant="floating" id="last_name" pb="1em">
                     <Input placeholder=" " {...register('last_name')} />
                     <FormLabel htmlFor="last">Last name:</FormLabel>
                     <FormHelperText>Doe</FormHelperText>
@@ -221,11 +212,7 @@ export default function Page({ page }) {
                     </FormErrorMessage>
                   </FormControl>
 
-                  <FormControl
-                    variant="floating"
-                    id="company_name"
-                    pb="1em"
-                  >
+                  <FormControl variant="floating" id="company_name" pb="1em">
                     <Input placeholder=" " {...register('company_name')} />
                     <FormLabel htmlFor="last">Company name:</FormLabel>
                     <FormHelperText>Acme Co</FormHelperText>
@@ -234,22 +221,14 @@ export default function Page({ page }) {
                     </FormErrorMessage>
                   </FormControl>
 
-                  <FormControl
-                    variant="floating"
-                    id="role"
-                    pb="1em"
-                  >
+                  <FormControl variant="floating" id="role" pb="1em">
                     <Input placeholder=" " {...register('role')} />
                     <FormLabel htmlFor="last">Role:</FormLabel>
                     <FormHelperText>Manager</FormHelperText>
                     <FormErrorMessage>Please add a role.</FormErrorMessage>
                   </FormControl>
 
-                  <FormControl
-                    variant="floating"
-                    id="role"
-                    pb="1em"
-                  >
+                  <FormControl variant="floating" id="role" pb="1em">
                     <Textarea placeholder=" " {...register('message')} />
                     <FormLabel htmlFor="last">Message:</FormLabel>
                     <FormHelperText>How can we help?</FormHelperText>

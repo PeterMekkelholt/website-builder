@@ -70,7 +70,7 @@ export const CQuel_signup = (props) => {
           <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 14 }}>
             <Heading
               as="h2"
-              fontFamily="Poppins"
+              // fontFamily="Poppins"
               size="2xl"
               color="#284863"
               fontWeight="extrabold"

@@ -23,7 +23,7 @@ export const CQuel_cta = (props) => {
       <Stack as={Box} textAlign={'center'} spacing={{ base: 8, md: 14 }}>
         <Heading
           as="h2"
-          fontFamily="Poppins"
+          // fontFamily="Poppins"
           size="2xl"
           color="brand.lightBlue"
           fontWeight="extrabold"

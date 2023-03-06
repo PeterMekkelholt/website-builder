@@ -29,11 +29,13 @@ export const CQuel_Hero_Full = (props) => {
             <Heading
               as="h1"
               color="white"
-              fontFamily="Poppins"
-              size="2xl"
-              lineHeight="1.3"
-              fontWeight="bold"
+              // fontFamily="Poppins"
+              size="3xl"
+              // lineHeight="1.3"
+              fontWeight="extrabold"
               letterSpacing="tight"
+              lineHeight={'110%'}
+              // fontWeight="bold"
             >
               <Text
                 dangerouslySetInnerHTML={createMarkup(props.hero_title)}
@@ -59,7 +61,7 @@ export const CQuel_Hero_Full = (props) => {
             width="100%"
             justifyContent="flex-end"
           >
-            <HinesLogo></HinesLogo>
+            {/* <HinesLogo></HinesLogo> */}
           </Flex>
         </Flex>
       </Box>
