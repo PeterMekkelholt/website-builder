@@ -129,7 +129,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Text fontSize="md">
         <CookieConsent
-          debug={true}
+          // debug={true}
           location="bottom"
           buttonText="I Understand"
           cookieName="CquelCookie"
