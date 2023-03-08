@@ -7,6 +7,7 @@ import '../styles/globals.css'
 import CookieConsent from 'react-cookie-consent'
 import '../components/builder/builder-config'
 import { ChakraProvider, extendTheme, Text, Link } from '@chakra-ui/react'
+import { lime } from '@mui/material/colors'
 
 const activeLabelStyles = {
   transform: 'scale(0.85) translateY(-24px)',
@@ -47,6 +48,7 @@ const theme = extendTheme({
       defaultProps: {
         variant: 'carbon',
       },
+  
       variants: {
         nav: {
           bg: 'brand.gradient1',
@@ -70,8 +72,19 @@ const theme = extendTheme({
           _hover: {
             bg: 'brand.carbonHover',
             boxShadow: 'md',
+            
           },
+          _disabled: {
+            opacity: .5
+          },
+      
         },
+          label: {
+            _disabled: {
+              opacity: 1,
+            },
+        },
+
         white: {
           bg: 'white',
           color: 'brand.darkBlue',

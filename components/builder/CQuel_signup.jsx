@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Subscribe from '../../lib/mailerlite'
 import { ToastContainer } from 'react-toastify'
 import {
@@ -14,11 +14,14 @@ import {
   useColorModeValue as mode,
   useToast,
   Center,
+  Checkbox,
 } from '@chakra-ui/react'
 import HexagonSection from '../HexagonSection'
 
 export const CQuel_signup = (props) => {
   const [email, setEmail] = useState('')
+  const [disabled, setDisabled] = React.useState(true);
+
   const toast = useToast()
   const subscribeEmail = () => {
     if (!email) {
@@ -110,11 +113,14 @@ export const CQuel_signup = (props) => {
                   colorScheme="gray"
                   width="150px"
                   onClick={subscribeEmail}
+                  isDisabled={disabled} 
                 >
                   Subscribe
                 </Button>
               </Flex>
             </Flex>
+            <Checkbox onChange={()=>setDisabled(!disabled)}>I agree to the Privacy Policy</Checkbox>
+
           </Stack>
         </Container>
       </HexagonSection>

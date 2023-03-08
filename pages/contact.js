@@ -38,7 +38,8 @@ export default function Page({ page }) {
     handleSubmit,
     formState: { isSubmitting },
   } = useForm()
-
+  const [disabled, setDisabled] = React.useState(true);
+ 
   function onSubmit(data) {
     axios
       .post('https://eosynbo208gy57x.m.pipedream.net', data)
@@ -237,6 +238,8 @@ export default function Page({ page }) {
                     </FormErrorMessage>
                     {/* <input {...register('message')} type="textarea"></input> */}
                   </FormControl>
+
+                  <Checkbox onChange={()=>setDisabled(!disabled)}>I agree to the Privacy Policy</Checkbox>
                 </Stack>
 
                 <Box>
@@ -253,8 +256,10 @@ export default function Page({ page }) {
                 width="fit-content"
                 mt="2em"
                 variant="carbon"
-              >
-                {isSubmitting ? 'Submitting' : 'Submit'}
+                isDisabled={disabled} 
+                >
+                {isSubmitting ? 'Submitting' : 'Submit'} 
+
               </Button>
             </Container>
           </form>
