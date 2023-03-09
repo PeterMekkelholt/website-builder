@@ -244,6 +244,7 @@ export default function Page({ page }) {
 
                 <Box>
                   <Stack spacing={5} direction="column">
+                    <FormLabel htmlFor="product_1_plan">Select the products you are most interested in *</FormLabel>
                     <Checkbox {...register('product_1_plan')}>Plan with CQuel Vision</Checkbox>
                     <Checkbox {...register('product_2_select')}>Select with CQuel Bridge</Checkbox>
                     <Checkbox {...register('product_3_fund')}>Fund with CQuel Accelerate</Checkbox>
