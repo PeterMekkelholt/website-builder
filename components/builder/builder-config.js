@@ -7,9 +7,9 @@ const M49_children_hero = withChildren(M49_hero)
 const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
-  dynamic(() => import('./CQuel_h1')),
+  dynamic(() => import('./Hyve_h1')),
   {
-    name: 'CQuel H1 Heading',
+    name: 'Hyve H1 Heading',
     defaultStyles: {
       marginTop: 0,
     },
@@ -23,7 +23,7 @@ Builder.registerComponent(
     ],
   }
 )
-
+/*
 Builder.registerComponent(
   dynamic(() => import('./CQuel_h2')),
   {
@@ -485,6 +485,7 @@ Builder.registerComponent(
     ],
   }
 )
+*/
 
 /*
 Builder.registerComponent(M49_children_hero, {
@@ -732,9 +733,9 @@ Builder.registerComponent(
 Builder.register('insertMenu', {
   name: 'Mach49 Components',
   items: [
+    { name: 'Hyve H1 Heading' },
+    /*    { name: 'CQuel Hero Full' },
     { name: 'CQuel Hero Half' },
-    { name: 'CQuel Hero Full' },
-    { name: 'CQuel H1 Heading' },
     { name: 'CQuel H2 Heading' },
     { name: 'CQuel Rich Text' },
     { name: 'CQuel CTA' },
