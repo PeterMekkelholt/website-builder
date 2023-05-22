@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Logo } from '../Logo'
+//import { Logo } from '../../Logo'
 import { useState } from 'react'
 import { FaLinkedin, FaTwitter } from 'react-icons/fa'
 import {
@@ -16,7 +16,10 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
-export const CQuel_footer = (props) => {
+
+//{<Logo height="70px" />}
+
+export const Hyve_footer = (props) => {
   return (
     <Box bg="brand.darkBlue" color={useColorModeValue('gray.700', 'gray.200')}>
       <Box
@@ -55,7 +58,7 @@ export const CQuel_footer = (props) => {
         >
           <Flex flexDirection="row" justifyContent="space-between">
             <Box display={{ base: 'none', sm: 'none', md: 'inline' }}>
-              <Logo height="70px" />
+            
             </Box>
 
             <Flex
@@ -97,4 +100,4 @@ function createMarkup(content) {
 }
 
 
-export default CQuel_footer
+export default Hyve_footer

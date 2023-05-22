@@ -1,13 +1,13 @@
 import { Builder, BuilderComponent, withChildren } from '@builder.io/react'
-import M49_hero from './M49_body'
-import CQuel_body from './CQuel_body'
+// import M49_hero from './M49_body'
+// import CQuel_body from './CQuel_body'
 import dynamic from 'next/dynamic'
 
-const M49_children_hero = withChildren(M49_hero)
-const CQuel_children_body = withChildren(CQuel_body)
+//const M49_children_hero = withChildren(M49_hero)
+//const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
-  dynamic(() => import('./Hyve_h1')),
+  dynamic(() => import('./hyve/h1')),
   {
     name: 'Hyve H1 Heading',
     defaultStyles: {
@@ -15,10 +15,36 @@ Builder.registerComponent(
     },
     inputs: [
       {
-        name: 'h1_title',
+        name: 'h1_heading',
         type: 'Text',
         required: true,
-        defaultValue: 'Title Text',
+        defaultValue: 'Text for H1 Heading',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./hyve/footer')),
+  {
+    name: 'Hyve Footer',
+    image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    inputs: [
+      {
+        name: 'footer_copy',
+        type: 'richText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'footer_URL',
+        type: 'url',
+        required: true,
+        defaultValue: 'https://www.linkedin.com/',
       },
     ],
   }
@@ -413,31 +439,7 @@ Builder.registerComponent(
   }
 )
 
-Builder.registerComponent(
-  dynamic(() => import('./CQuel_footer')),
-  {
-    name: 'CQuel Footer',
-    image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
-    defaultStyles: {
-      marginTop: 0,
-    },
-    inputs: [
-      {
-        name: 'footer_copy',
-        type: 'richText',
-        required: true,
-        defaultValue:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-      },
-      {
-        name: 'footer_URL',
-        type: 'url',
-        required: true,
-        defaultValue: 'https://www.linkedin.com/',
-      },
-    ],
-  }
-)
+
 
 Builder.registerComponent(
   withChildren(dynamic(() => import('./CQuel_section'))),
@@ -731,9 +733,10 @@ Builder.registerComponent(
 */
 
 Builder.register('insertMenu', {
-  name: 'Mach49 Components',
+  name: 'Hyve Components',
   items: [
     { name: 'Hyve H1 Heading' },
+    { name: 'Hyve Footer' },
     /*    { name: 'CQuel Hero Full' },
     { name: 'CQuel Hero Half' },
     { name: 'CQuel H2 Heading' },
@@ -747,7 +750,6 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body Item' },
     { name: 'CQuel Hines' },
     { name: 'CQuel Signup' },
-    { name: 'CQuel Footer' },
     { name: 'CQuel Section' },
     { name: 'M49 Nav' },
     /*
