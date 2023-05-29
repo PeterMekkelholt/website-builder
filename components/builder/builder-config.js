@@ -20,6 +20,7 @@ Builder.registerComponent(
         required: true,
         defaultValue: 'Text for H1 Heading',
       },
+      
     ],
   }
 )
@@ -45,6 +46,18 @@ Builder.registerComponent(
         type: 'url',
         required: true,
         defaultValue: 'https://www.linkedin.com/',
+      },
+      {
+        name: 'footer_items',
+        type: 'list',
+        defaultValue: [{ caption: 'Link', url: 'https://google.com' }],
+        subFields: [
+          { name: 'caption', type: 'string' },
+          {
+            name: 'url',
+            type: 'string',
+          },
+        ],
       },
     ],
   }

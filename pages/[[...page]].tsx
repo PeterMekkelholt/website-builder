@@ -3,9 +3,9 @@ import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import React from 'react'
 import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
-import SEO from '../components/SEO'
-import Nav from '../components/Nav.jsx'
-// import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
+//import SEO from '../components/SEO'
+//import Nav from '../components/Nav.jsx'
+//import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi'
 
 /*
   Initialize the Builder SDK with your organization's API Key
@@ -129,13 +129,11 @@ export default function Page({ page }) {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Nav /> */}
-      {/* <BuilderComponent model="nav" /> */}
 
       {/* Render the Builder page */}
       <BuilderComponent model="page" content={page} />
 
-      {/* <BuilderComponent model="footer" /> */}
+      <BuilderComponent model="_hyve_footer" />
     </>
   )
 }
