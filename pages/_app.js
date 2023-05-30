@@ -7,7 +7,7 @@ import '../styles/globals.css'
 import CookieConsent from 'react-cookie-consent'
 import '../components/builder/builder-config'
 import { ChakraProvider, extendTheme, Text, Link } from '@chakra-ui/react'
-import { lime } from '@mui/material/colors'
+/* import { lime } from '@mui/material/colors' */
 
 const activeLabelStyles = {
   transform: 'scale(0.85) translateY(-24px)',
