@@ -133,7 +133,7 @@ export default function Page({ page }) {
       {/* Render the Builder page */}
       <BuilderComponent model="page" content={page} />
 
-      <BuilderComponent model="_hyve_footer" />
+      <BuilderComponent model="sitefooter" />
     </>
   )
 }

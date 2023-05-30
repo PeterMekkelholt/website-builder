@@ -7,6 +7,19 @@ import dynamic from 'next/dynamic'
 //const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
+  dynamic(() => import('./hyve/logo')),
+  {
+    name: 'Hyve Logo',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [],
+  }
+)
+
+Builder.registerComponent(
   dynamic(() => import('./hyve/h1')),
   {
     name: 'Hyve H1 Heading',
@@ -187,18 +200,7 @@ Builder.registerComponent(
   }
 )
 
-Builder.registerComponent(
-  dynamic(() => import('./CQuel_hines')),
-  {
-    name: 'CQuel Hines',
-    defaultStyles: {
-      marginTop: 0,
-    },
-    image:
-      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
-    inputs: [],
-  }
-)
+
 
 Builder.registerComponent(
   dynamic(() => import('./CQuel_nav')),
@@ -750,6 +752,7 @@ Builder.register('insertMenu', {
   items: [
     { name: 'Hyve H1 Heading' },
     { name: 'Hyve Footer' },
+    { name: 'Hyve Logo' },
     /*    { name: 'CQuel Hero Full' },
     { name: 'CQuel Hero Half' },
     { name: 'CQuel H2 Heading' },
@@ -761,7 +764,6 @@ Builder.register('insertMenu', {
     { name: 'CQuel Body Item Left' },
     { name: 'CQuel Body Item Right' },
     { name: 'CQuel Body Item' },
-    { name: 'CQuel Hines' },
     { name: 'CQuel Signup' },
     { name: 'CQuel Section' },
     { name: 'M49 Nav' },
