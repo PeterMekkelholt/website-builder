@@ -23,7 +23,7 @@ import {
   FormErrorMessage,
   Link,
 } from '@chakra-ui/react'
-import { Logo } from '../components/Logo'
+//import { Logo } from '../components/Logo/builder/hyve/logo'
 
 export default function Page({ page }) {
   const toast = useToast()
@@ -100,7 +100,7 @@ export default function Page({ page }) {
       >
         <Center>
           <Link href="/" passHref>
-            <Logo></Logo>
+            LOGO
           </Link>
         </Center>
       </Box>
