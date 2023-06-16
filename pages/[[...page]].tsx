@@ -11,7 +11,7 @@ import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
   Initialize the Builder SDK with your organization's API Key
   The API Key can be found on: https://builder.io/account/settings
 */
-builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY)
+builder.init('1000519dfde5491ba2f6255a5b490649')
 
 export async function getStaticProps({ params }) {
   /*
@@ -82,7 +82,7 @@ export default function Page({ page }) {
   return (
     <>
       <Head>
-        {/* Add any relevant SEO metadata or open graph tags here */}
+        {/* 
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -128,12 +128,28 @@ export default function Page({ page }) {
         <link rel="canonical" href="https://www.cquel.io/" />
 
         <link rel="icon" href="/favicon.ico" />
+      */}
       </Head>
 
-      {/* Render the Builder page */}
+      {
+      /* Render the Builder page 
       <BuilderComponent model="page" content={page} />
-
       <BuilderComponent model="sitefooter" />
+      */
+      }
+      <div className='container'> 
+        <h1>Join Fabrik ... coming Soon ...</h1>
+        <style jsx>{`
+        .container {
+          margin: auto;
+          width: 50%;
+          padding: 10px;
+        }
+        h1 {
+          font-size: 40px;
+        }
+        `}</style>
+      </div>
     </>
   )
 }
