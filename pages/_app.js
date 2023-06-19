@@ -110,7 +110,7 @@ const theme = extendTheme({
       carbon: '#3A3A4A',
       carbonHover: '#555569',
       gradient1: 'linear-gradient(135deg, #52A1CF 0%, #70C190 100%)',
-      gradient2: 'linear-gradient(135deg, #7AB6C9 0%, #C7E8E7 100%)',
+      gradient2: 'linear-gradient(135deg, #FFFFFF 0%, #000000 100%)',
       gradient3: 'linear-gradient(90deg, #7AB6C9 0%, #C7E8E7 100%)',
     },
   },
@@ -118,7 +118,8 @@ const theme = extendTheme({
     global: {
       // styles for the `body`
       body: {
-        bg: 'rgb(185, 227, 239, .2)',
+        //bg: 'rgb(185, 227, 239, .2)',
+        bg: '##d1b7f033'
       },
     },
   },

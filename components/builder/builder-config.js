@@ -7,9 +7,9 @@ import dynamic from 'next/dynamic'
 //const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
-  dynamic(() => import('./hyve/logo')),
+  dynamic(() => import('./fabrik/logo')),
   {
-    name: 'Hyve Logo',
+    name: 'Fabrik Logo',
     defaultStyles: {
       marginTop: 0,
     },
@@ -20,9 +20,9 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./hyve/h1')),
+  dynamic(() => import('./Fabrik/h1')),
   {
-    name: 'Hyve H1 Heading',
+    name: 'Fabrik H1 Heading',
     defaultStyles: {
       marginTop: 0,
     },
@@ -37,11 +37,12 @@ Builder.registerComponent(
     ],
   }
 )
-
+/*** 
+ * Example of a List type component
 Builder.registerComponent(
-  dynamic(() => import('./hyve/footer')),
+  dynamic(() => import('./Fabrik/footer')),
   {
-    name: 'Hyve Footer',
+    name: 'Fabrik Footer',
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
     defaultStyles: {
       marginTop: 0,
@@ -52,7 +53,7 @@ Builder.registerComponent(
         type: 'richText',
         required: true,
         defaultValue:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
       },
       {
         name: 'footer_URL',
@@ -74,8 +75,10 @@ Builder.registerComponent(
       },
     ],
   }
-)
-/*
+  )
+  */
+
+  /*
 Builder.registerComponent(
   dynamic(() => import('./CQuel_h2')),
   {
@@ -748,12 +751,12 @@ Builder.registerComponent(
 */
 
 Builder.register('insertMenu', {
-  name: 'Hyve Components',
+  name: 'Fabrik Components',
   items: [
-    { name: 'Hyve H1 Heading' },
-    { name: 'Hyve Footer' },
-    { name: 'Hyve Logo' },
+    { name: 'Fabrik H1 Heading' },
+    { name: 'Fabrik Logo' },
     /*    { name: 'CQuel Hero Full' },
+    { name: 'Fabrik Footer' },
     { name: 'CQuel Hero Half' },
     { name: 'CQuel H2 Heading' },
     { name: 'CQuel Rich Text' },
