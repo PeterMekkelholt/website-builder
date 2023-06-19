@@ -11,7 +11,8 @@ import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
   Initialize the Builder SDK with your organization's API Key
   The API Key can be found on: https://builder.io/account/settings
 */
-builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY)
+//builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY)
+builder.init('1000519dfde5491ba2f6255a5b490649')
 
 export async function getStaticProps({ params }) {
   /*
