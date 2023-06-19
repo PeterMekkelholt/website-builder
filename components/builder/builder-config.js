@@ -20,7 +20,7 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./Fabrik/h1')),
+  dynamic(() => import('./fabrik/h1')),
   {
     name: 'Fabrik H1 Heading',
     defaultStyles: {
