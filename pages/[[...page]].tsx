@@ -88,6 +88,8 @@ export default function Page({ page }) {
 
       {/* Render the Builder page */}
       <BuilderComponent model="page" content={page} />
+      
+      <h1>Evolvr hard code</h1>
 
       <BuilderComponent model="sitefooter" />
     </>
