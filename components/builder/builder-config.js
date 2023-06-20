@@ -1,10 +1,12 @@
 import { Builder, BuilderComponent, withChildren } from '@builder.io/react'
 // import M49_hero from './M49_body'
 // import CQuel_body from './CQuel_body'
+import Fabrik_container from './fabrik/container'
 import dynamic from 'next/dynamic'
 
 //const M49_children_hero = withChildren(M49_hero)
 //const CQuel_children_body = withChildren(CQuel_body)
+const Fabrik_container_children = withChildren(Fabrik_container)
 
 Builder.registerComponent(
   dynamic(() => import('./fabrik/logo')),
@@ -34,6 +36,164 @@ Builder.registerComponent(
         defaultValue: 'Text for H1 Heading',
       },
       
+    ],
+  }
+)
+
+Builder.registerComponent(Fabrik_container_children, {
+  name: 'Fabrik Container',
+  defaultStyles: {
+    marginTop: 0,
+  },
+  image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
+  inputs: [
+    // {
+    //   name: 'body_title',
+    //   type: 'Text',
+    //   required: true,
+    //   defaultValue: 'We’re here at every step',
+    // },
+  ],
+  // (Optionally) specify requirements that the direct children can only be certain types
+  childRequirements: {
+    message: 'You can only put Body Items or Text in a Hero',
+    query: {
+      'component.name': {
+        $in: [
+          'Fabrik Container Item',
+          'Fabrik Container Item Left',
+          'Fabrik Container Item Right',
+          'Text',
+        ],
+      },
+    },
+  },
+})
+
+Builder.registerComponent(
+  dynamic(() => import('./fabrik/container_item')),
+  {
+    name: 'Fabrik Container Item',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'image_left',
+        type: 'boolean',
+        defaultValue: true,
+      },
+      {
+        name: 'item_headline',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan on an asset level',
+      },
+      {
+        name: 'item_description',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'text',
+        required: true,
+        defaultValue: 'Discover More',
+      },
+      {
+        name: 'item_button_url',
+        type: 'string',
+        required: true,
+        defaultValue: '#',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./fabrik/container_item_left')),
+  {
+    name: 'Fabrik Container Item Left',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'item_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      {
+        name: 'item_headline',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan on an asset level',
+      },
+      {
+        name: 'item_description',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Discover More',
+      },
+    ],
+  }
+)
+
+Builder.registerComponent(
+  dynamic(() => import('./fabrik/container_item_right')),
+  {
+    name: 'Fabrik Container Item Right',
+    defaultStyles: {
+      marginTop: 0,
+    },
+    image:
+      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
+    inputs: [
+      {
+        name: 'item_image',
+        type: 'file',
+        required: true,
+        allowedFileTypes: ['png'],
+      },
+      // {
+      //   name: 'item_number',
+      //   type: 'Text',
+      //   required: true,
+      //   defaultValue: '#',
+      // },
+      {
+        name: 'item_headline',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Plan on an asset level',
+      },
+      {
+        name: 'item_description',
+        type: 'longText',
+        required: true,
+        defaultValue:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      },
+      {
+        name: 'item_button',
+        type: 'Text',
+        required: true,
+        defaultValue: 'Discover More',
+      },
     ],
   }
 )
@@ -215,170 +375,6 @@ Builder.registerComponent(
     image:
       'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
     inputs: [],
-  }
-)
-
-Builder.registerComponent(CQuel_children_body, {
-  name: 'CQuel Body',
-  defaultStyles: {
-    marginTop: 0,
-  },
-  image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
-  inputs: [
-    // {
-    //   name: 'body_title',
-    //   type: 'Text',
-    //   required: true,
-    //   defaultValue: 'We’re here at every step',
-    // },
-  ],
-  // (Optionally) specify requirements that the direct children can only be certain types
-  childRequirements: {
-    message: 'You can only put Body Items or Text in a Hero',
-    query: {
-      'component.name': {
-        $in: [
-          'CQuel Body Item',
-          'CQuel Body Item Left',
-          'CQuel Body Item Right',
-          'Text',
-        ],
-      },
-    },
-  },
-})
-
-Builder.registerComponent(
-  dynamic(() => import('./CQuel_body_item')),
-  {
-    name: 'CQuel Body Item',
-    defaultStyles: {
-      marginTop: 0,
-    },
-    image:
-      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
-    inputs: [
-      {
-        name: 'image_left',
-        type: 'boolean',
-        defaultValue: true,
-      },
-      {
-        name: 'item_image',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['png'],
-      },
-      {
-        name: 'item_headline',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Plan on an asset level',
-      },
-      {
-        name: 'item_description',
-        type: 'longText',
-        required: true,
-        defaultValue:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-      },
-      {
-        name: 'item_button',
-        type: 'text',
-        required: true,
-        defaultValue: 'Discover More',
-      },
-      {
-        name: 'item_button_url',
-        type: 'string',
-        required: true,
-        defaultValue: '#',
-      },
-    ],
-  }
-)
-
-Builder.registerComponent(
-  dynamic(() => import('./CQuel_body_item_left')),
-  {
-    name: 'CQuel Body Item Left',
-    defaultStyles: {
-      marginTop: 0,
-    },
-    image:
-      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
-    inputs: [
-      {
-        name: 'item_image',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['png'],
-      },
-      {
-        name: 'item_headline',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Plan on an asset level',
-      },
-      {
-        name: 'item_description',
-        type: 'longText',
-        required: true,
-        defaultValue:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-      },
-      {
-        name: 'item_button',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Discover More',
-      },
-    ],
-  }
-)
-
-Builder.registerComponent(
-  dynamic(() => import('./CQuel_body_item_right')),
-  {
-    name: 'CQuel Body Item Right',
-    defaultStyles: {
-      marginTop: 0,
-    },
-    image:
-      'https://tabler-icons.io/static/tabler-icons/icons-png/device-desktop-analytics.png',
-    inputs: [
-      {
-        name: 'item_image',
-        type: 'file',
-        required: true,
-        allowedFileTypes: ['png'],
-      },
-      // {
-      //   name: 'item_number',
-      //   type: 'Text',
-      //   required: true,
-      //   defaultValue: '#',
-      // },
-      {
-        name: 'item_headline',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Plan on an asset level',
-      },
-      {
-        name: 'item_description',
-        type: 'longText',
-        required: true,
-        defaultValue:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-      },
-      {
-        name: 'item_button',
-        type: 'Text',
-        required: true,
-        defaultValue: 'Discover More',
-      },
-    ],
   }
 )
 
@@ -753,9 +749,16 @@ Builder.registerComponent(
 Builder.register('insertMenu', {
   name: 'Fabrik Components',
   items: [
+
     { name: 'Fabrik H1 Heading' },
     { name: 'Fabrik Logo' },
-    /*    { name: 'CQuel Hero Full' },
+    { name: 'Fabrik Container ' },
+    { name: 'Fabrik Container  Item Left' },
+    { name: 'Fabrik Container  Item Right' },
+    { name: 'Fabrik Container  Item' },
+
+    /*    
+    { name: 'CQuel Hero Full' },
     { name: 'Fabrik Footer' },
     { name: 'CQuel Hero Half' },
     { name: 'CQuel H2 Heading' },
@@ -763,14 +766,10 @@ Builder.register('insertMenu', {
     { name: 'CQuel CTA' },
     { name: 'CQuel Nav' },
     { name: 'CQuel Steps' },
-    { name: 'CQuel Body' },
-    { name: 'CQuel Body Item Left' },
-    { name: 'CQuel Body Item Right' },
-    { name: 'CQuel Body Item' },
     { name: 'CQuel Signup' },
     { name: 'CQuel Section' },
     { name: 'M49 Nav' },
-    /*
+
     { name: 'M49 Body' },
     { name: 'M49 Page Heading' },
     { name: 'M49 3 Columns' },
