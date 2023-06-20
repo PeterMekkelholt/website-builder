@@ -749,7 +749,7 @@ Builder.registerComponent(
 
 Builder.register('insertMenu', {
   name: 'Hyve Components',
-  items: [
+  items: [ 
     { name: 'EvolVR H1 Heading' },
     { name: 'EvolVR Footer' },
     { name: 'EvolVR Logo' },
