@@ -752,7 +752,7 @@ Builder.register('insertMenu', {
 
     { name: 'Evolvr H1 Heading' },
     { name: 'Evolvr Logo' },
-    { name: 'Evolvr Container ' },
+    { name: 'Evolvr Container' },
     { name: 'Evolvr Container Item Left' },
     { name: 'Evolvr Container Item Right' },
     { name: 'Evolvr Container Item' },
