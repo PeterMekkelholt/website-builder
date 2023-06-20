@@ -7,9 +7,9 @@ import dynamic from 'next/dynamic'
 //const CQuel_children_body = withChildren(CQuel_body)
 
 Builder.registerComponent(
-  dynamic(() => import('./hyve/logo')),
+  dynamic(() => import('./evolvr/logo')),
   {
-    name: 'Hyve Logo',
+    name: 'EvolVR Logo',
     defaultStyles: {
       marginTop: 0,
     },
@@ -20,9 +20,9 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./hyve/h1')),
+  dynamic(() => import('./evolvr/h1')),
   {
-    name: 'Hyve H1 Heading',
+    name: 'EvolVR H1 Heading',
     defaultStyles: {
       marginTop: 0,
     },
@@ -39,7 +39,7 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./hyve/footer')),
+  dynamic(() => import('./evolvr/footer')),
   {
     name: 'Hyve Footer',
     image: 'https://tabler-icons.io/static/tabler-icons/icons-png/id-badge.png',
@@ -750,9 +750,9 @@ Builder.registerComponent(
 Builder.register('insertMenu', {
   name: 'Hyve Components',
   items: [
-    { name: 'Hyve H1 Heading' },
-    { name: 'Hyve Footer' },
-    { name: 'Hyve Logo' },
+    { name: 'EvolVR H1 Heading' },
+    { name: 'EvolVR Footer' },
+    { name: 'EvolVR Logo' },
     /*    { name: 'CQuel Hero Full' },
     { name: 'CQuel Hero Half' },
     { name: 'CQuel H2 Heading' },

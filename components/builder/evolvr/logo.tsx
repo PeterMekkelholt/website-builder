@@ -1,7 +1,7 @@
 import { Center } from '@chakra-ui/react'
 
 
-export const Hyve_logo = (props) => {
+export const Evolvr_Logo = (props) => {
   return (
     <Center
       bgColor="brand.gradient2"
@@ -39,4 +39,4 @@ export const Hyve_logo = (props) => {
   )
 }
 
-export default Hyve_logo
+export default Evolvr_Logo

@@ -11,7 +11,7 @@ import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
   Initialize the Builder SDK with your organization's API Key
   The API Key can be found on: https://builder.io/account/settings
 */
-builder.init('1000519dfde5491ba2f6255a5b490649')
+builder.init('3d66fe99c10643848fbb66599e9e1f8f')
 
 export async function getStaticProps({ params }) {
   /*
@@ -138,7 +138,7 @@ export default function Page({ page }) {
       */
       }
       <div className='container'> 
-        <h1>Join Fabrik ... coming Soon ...</h1>
+        <h1>EvolVR ... coming Soon ...</h1>
         <style jsx>{`
         .container {
           margin: auto;

@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react'
 
 
-export const Hyve_footer = (props) => {
+export const Evolvr_Footer = (props) => {
   return (
     <Box color={useColorModeValue('gray.700', 'gray.200')}>
       <div>
@@ -35,4 +35,4 @@ function createMarkup(content) {
 }
 
 
-export default Hyve_footer
+export default Evolvr_Footer
