@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
-export const Fabrik_Container = (props) => {
+export const Evolvr_Container = (props) => {
   return (
     <Box as="section" minH="400px">
       {props.children}
@@ -8,4 +8,4 @@ export const Fabrik_Container = (props) => {
   )
 }
 
-export default Fabrik_Container
+export default Evolvr_Container

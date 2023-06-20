@@ -7,7 +7,7 @@ import {
   } from '@chakra-ui/react'
   import Link from 'next/link'
   
-  const Fabrik_Container_Item = (props) => {
+  const Evolvr_Container_Item = (props) => {
     const {
       item_headline: headline,
       item_description: description,
@@ -46,4 +46,4 @@ import {
     )
   }
   
-  export default Fabrik_Container_Item
+  export default Evolvr_Container_Item

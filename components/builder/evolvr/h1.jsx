@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
-export const Fabrik_h1 = (props) => {
+export const Evolvr_H1 = (props) => {
   return (
     <Box as="section">
     <h1>{props.h1_heading}</h1>
@@ -8,4 +8,4 @@ export const Fabrik_h1 = (props) => {
   )
 }
 
-export default Fabrik_h1
+export default Evolvr_H1

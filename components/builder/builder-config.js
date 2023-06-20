@@ -1,17 +1,17 @@
 import { Builder, BuilderComponent, withChildren } from '@builder.io/react'
 // import M49_hero from './M49_body'
 // import CQuel_body from './CQuel_body'
-import Fabrik_container from './fabrik/container'
+import Evolvr_Container from './evolvr/container'
 import dynamic from 'next/dynamic'
 
 //const M49_children_hero = withChildren(M49_hero)
 //const CQuel_children_body = withChildren(CQuel_body)
-const Fabrik_container_children = withChildren(Fabrik_container)
+const Evolvr_Container_Children = withChildren(Evolvr_Container)
 
 Builder.registerComponent(
-  dynamic(() => import('./fabrik/logo')),
+  dynamic(() => import('./evolvr/logo')),
   {
-    name: 'Fabrik Logo',
+    name: 'Evolvr Logo',
     defaultStyles: {
       marginTop: 0,
     },
@@ -22,9 +22,9 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./fabrik/h1')),
+  dynamic(() => import('./evolvr/h1')),
   {
-    name: 'Fabrik H1 Heading',
+    name: 'Evolvr H1 Heading',
     defaultStyles: {
       marginTop: 0,
     },
@@ -40,8 +40,8 @@ Builder.registerComponent(
   }
 )
 
-Builder.registerComponent(Fabrik_container_children, {
-  name: 'Fabrik Container',
+Builder.registerComponent(Evolvr_Container_Children, {
+  name: 'Evolvr Container',
   defaultStyles: {
     marginTop: 0,
   },
@@ -60,9 +60,9 @@ Builder.registerComponent(Fabrik_container_children, {
     query: {
       'component.name': {
         $in: [
-          'Fabrik Container Item',
-          'Fabrik Container Item Left',
-          'Fabrik Container Item Right',
+          'Evolvr Container Item',
+          'Evolvr Container Item Left',
+          'Evolvr Container Item Right',
           'Text',
         ],
       },
@@ -71,9 +71,9 @@ Builder.registerComponent(Fabrik_container_children, {
 })
 
 Builder.registerComponent(
-  dynamic(() => import('./fabrik/container_item')),
+  dynamic(() => import('./evolvr/container_item')),
   {
-    name: 'Fabrik Container Item',
+    name: 'Evolvr Container Item',
     defaultStyles: {
       marginTop: 0,
     },
@@ -89,7 +89,7 @@ Builder.registerComponent(
         name: 'item_headline',
         type: 'Text',
         required: true,
-        defaultValue: 'Plan on an asset level',
+        defaultValue: 'add an headline',
       },
       {
         name: 'item_description',
@@ -115,9 +115,9 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./fabrik/container_item_left')),
+  dynamic(() => import('./evolvr/container_item_left')),
   {
-    name: 'Fabrik Container Item Left',
+    name: 'Evolvr Container Item Left',
     defaultStyles: {
       marginTop: 0,
     },
@@ -134,7 +134,7 @@ Builder.registerComponent(
         name: 'item_headline',
         type: 'Text',
         required: true,
-        defaultValue: 'Plan on an asset level',
+        defaultValue: 'Add a heading',
       },
       {
         name: 'item_description',
@@ -154,9 +154,9 @@ Builder.registerComponent(
 )
 
 Builder.registerComponent(
-  dynamic(() => import('./fabrik/container_item_right')),
+  dynamic(() => import('./evolvr/container_item_right')),
   {
-    name: 'Fabrik Container Item Right',
+    name: 'Evolvr Container Item Right',
     defaultStyles: {
       marginTop: 0,
     },
@@ -179,7 +179,7 @@ Builder.registerComponent(
         name: 'item_headline',
         type: 'Text',
         required: true,
-        defaultValue: 'Plan on an asset level',
+        defaultValue: 'Heading text',
       },
       {
         name: 'item_description',
@@ -747,15 +747,15 @@ Builder.registerComponent(
 */
 
 Builder.register('insertMenu', {
-  name: 'Fabrik Components',
+  name: 'Evolvr Components',
   items: [
 
-    { name: 'Fabrik H1 Heading' },
-    { name: 'Fabrik Logo' },
-    { name: 'Fabrik Container ' },
-    { name: 'Fabrik Container  Item Left' },
-    { name: 'Fabrik Container  Item Right' },
-    { name: 'Fabrik Container  Item' },
+    { name: 'Evolvr H1 Heading' },
+    { name: 'Evolvr Logo' },
+    { name: 'Evolvr Container ' },
+    { name: 'Evolvr Container Item Left' },
+    { name: 'Evolvr Container Item Right' },
+    { name: 'Evolvr Container Item' },
 
     /*    
     { name: 'CQuel Hero Full' },

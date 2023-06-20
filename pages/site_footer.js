@@ -1,7 +1,7 @@
 import { BuilderComponent, builder } from '@builder.io/react'
 
 // Replace with your Public API Key.
-builder.init('1000519dfde5491ba2f6255a5b490649')
+builder.init('3d66fe99c10643848fbb66599e9e1f8f')
 
 export async function getStaticProps({ params }) {
   const urlPath = '/' + (params?.page?.join('/') || '')
