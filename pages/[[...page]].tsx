@@ -12,7 +12,7 @@ import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
   The API Key can be found on: https://builder.io/account/settings
 */
 //builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY)
-builder.init('f104907a790a45e18dff1f6d55a358ab')
+builder.init('3d66fe99c10643848fbb66599e9e1f8f')
 
 export async function getStaticProps({ params }) {
   /*
